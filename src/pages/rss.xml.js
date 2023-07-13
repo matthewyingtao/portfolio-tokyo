@@ -1,16 +1,17 @@
-import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import rss from "@astrojs/rss";
+import slugify from "slugify";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
 export async function get(context) {
-	const posts = await getCollection('blog');
+	const posts = await Astro.glob("../posts/*.{md,mdx}");
+
 	return rss({
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,
 		site: context.site,
 		items: posts.map((post) => ({
 			...post.data,
-			link: `/blog/${post.slug}/`,
+			link: `/blog/${slugify(post.file.replace(/\.md(x)?/, ""))}/`,
 		})),
 	});
 }

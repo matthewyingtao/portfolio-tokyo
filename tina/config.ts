@@ -34,12 +34,6 @@ export default defineConfig({
 					},
 					{
 						type: "string",
-						name: "slug",
-						label: "Slug",
-						required: true,
-					},
-					{
-						type: "string",
 						name: "description",
 						label: "Description",
 						required: true,
