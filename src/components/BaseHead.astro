@@ -1,7 +1,5 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import "../styles/global.css";
+import GlobalCSS from "./globalCSS.astro";
 
 export interface Props {
 	title: string;
@@ -42,8 +40,4 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<style is:global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-</style>
+<GlobalCSS />
