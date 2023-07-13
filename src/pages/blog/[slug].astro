@@ -2,7 +2,7 @@
 import BlogPost from "../../layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
-	const posts = await Astro.glob("../../../content/posts/*.{md,mdx}");
+	const posts = await Astro.glob("../../posts/*.{md,mdx}");
 
 	return posts.map((post) => ({
 		params: {
@@ -17,8 +17,6 @@ export async function getStaticPaths() {
 
 const { frontmatter, Content } = Astro.props.post;
 ---
-
-<h1></h1>
 
 <BlogPost {...frontmatter}>
 	<h1>{frontmatter.title}</h1>
