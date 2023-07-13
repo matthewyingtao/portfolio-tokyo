@@ -6,6 +6,6 @@ export async function get(context) {
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,
 		site: context.site,
-		items: import.meta.glob("../posts/*.{md,mdx}"),
+		items: await pagesGlobToRssItems(import.meta.glob("../posts/*.{md,mdx}")),
 	});
 }
