@@ -1,4 +1,4 @@
-import rss from "@astrojs/rss";
+import rss, { pagesGlobToRssItems } from "@astrojs/rss";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
 export async function get(context) {
