@@ -44,10 +44,10 @@ import { BaseDirectory, createDir } from "@tauri-apps/api/fs";
 
 ```js
 const createDataFolder = async () => {
-	await createDir("data", {
-		dir: BaseDirectory.Desktop,
-		recursive: true,
-	});
+  await createDir("data", {
+    dir: BaseDirectory.Desktop,
+    recursive: true,
+  });
 };
 ```
 
@@ -57,14 +57,14 @@ You should probably also wrap this function in a try/except block like so:
 
 ```js
 const createDataFolder = async () => {
-	try {
-		await createDir("data", {
-			dir: BaseDirectory.Desktop,
-			recursive: true,
-		});
-	} catch (e) {
-		console.error(e);
-	}
+  try {
+    await createDir("data", {
+      dir: BaseDirectory.Desktop,
+      recursive: true,
+    });
+  } catch (e) {
+    console.error(e);
+  }
 };
 ```
 
@@ -72,19 +72,19 @@ const createDataFolder = async () => {
 
 ```js
 const createDataFile = async () => {
-	try {
-		await writeFile(
-			{
-				contents: "[]",
-				path: `./data/data.json`,
-			},
-			{
-				dir: dir,
-			}
-		);
-	} catch (e) {
-		console.log(e);
-	}
+  try {
+    await writeFile(
+      {
+        contents: "[]",
+        path: `./data/data.json`,
+      },
+      {
+        dir: dir,
+      },
+    );
+  } catch (e) {
+    console.log(e);
+  }
 };
 ```
 
@@ -98,17 +98,17 @@ First of all, I need to grab data from the clipboard. I did this by using the [C
 
 ```js
 const getClipboardData = async () => {
-	let res;
+  let res;
 
-	try {
-		res = await navigator.clipboard.read();
-	} catch (e) {
-		// there's nothing in the clipboard
-		return;
-	}
+  try {
+    res = await navigator.clipboard.read();
+  } catch (e) {
+    // there's nothing in the clipboard
+    return;
+  }
 
-	// return the most recent item
-	return res[0];
+  // return the most recent item
+  return res[0];
 };
 ```
 
@@ -116,30 +116,30 @@ Great! Now we can start putting together the function.
 
 ```js
 document.onpaste = async function () {
-	const pasted = await getClipboardData();
+  const pasted = await getClipboardData();
 
-	if (!pasted) {
-		console.error("You don't have any data in clipboard.");
-		return;
-	}
+  if (!pasted) {
+    console.error("You don't have any data in clipboard.");
+    return;
+  }
 
-	const imageTypes = ["image/png", "image/jpeg", "image/gif", "image/webp"];
+  const imageTypes = ["image/png", "image/jpeg", "image/gif", "image/webp"];
 
-	// using lodash's intersection to check if it's an image
-	const isImage = _.intersection(pasted.types, imageTypes).length > 0;
+  // using lodash's intersection to check if it's an image
+  const isImage = _.intersection(pasted.types, imageTypes).length > 0;
 
-	if (isImage) {
-		const imageType = pasted.types.find((type) => imageTypes.includes(type));
+  if (isImage) {
+    const imageType = pasted.types.find((type) => imageTypes.includes(type));
 
-		const blob = await pasted.getType(imageType);
+    const blob = await pasted.getType(imageType);
 
-		const fileExtension = imageType.split("/")[1];
+    const fileExtension = imageType.split("/")[1];
 
-		// save to file system
-		const imagePath = await saveImage(blob, fileExtension);
-		// then change the image src
-		imageSrc = imagePath;
-	}
+    // save to file system
+    const imagePath = await saveImage(blob, fileExtension);
+    // then change the image src
+    imageSrc = imagePath;
+  }
 };
 ```
 
@@ -149,9 +149,9 @@ Wow that's a mouthful. Anyway, now we have a blob object, how do we save it to t
 
 ```js
 const blobToBinary = async (blob) => {
-	const buffer = await blob.arrayBuffer();
+  const buffer = await blob.arrayBuffer();
 
-	return new Uint8Array(buffer);
+  return new Uint8Array(buffer);
 };
 ```
 
@@ -159,26 +159,26 @@ That's quite simple, isn't it? Now let's save it.
 
 ```js
 const saveImage = async (blob, extension) => {
-	const desktopPath = await desktopDir();
-	const bin = await blobToBinary(blob);
+  const desktopPath = await desktopDir();
+  const bin = await blobToBinary(blob);
 
-	// I'm constructing a unique file name here with nanoid,
-	// but you can replace it with anything!
-	const fileName = `${nanoid()}.${extension}`;
+  // I'm constructing a unique file name here with nanoid,
+  // but you can replace it with anything!
+  const fileName = `${nanoid()}.${extension}`;
 
-	await writeBinaryFile(
-		{
-			contents: bin,
-			path: `./data/${fileName}`,
-		},
-		{
-			dir: dir,
-		}
-	);
+  await writeBinaryFile(
+    {
+      contents: bin,
+      path: `./data/${fileName}`,
+    },
+    {
+      dir: dir,
+    },
+  );
 
-	// this transforms the path into one that's accessible by the webview,
-	// so you can use it as an <img src="" />
-	return convertFileSrc(await join(desktopPath, "data", fileName));
+  // this transforms the path into one that's accessible by the webview,
+  // so you can use it as an <img src="" />
+  return convertFileSrc(await join(desktopPath, "data", fileName));
 };
 ```
 

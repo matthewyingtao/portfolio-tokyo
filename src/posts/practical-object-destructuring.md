@@ -12,8 +12,8 @@ In short, object destructuring is a syntax that allows you to extract values fro
 
 ```javascript
 const favoriteFruit = {
-	name: "apple",
-	color: "red",
+  name: "apple",
+  color: "red",
 };
 
 const name = favoriteFruit.name;
@@ -29,14 +29,14 @@ How I like to think about it is that we’re stripping the properties we need fr
 
 ```javascript
 const item = {
-	id: 1234,
-	name: "Metal Bottle",
-	variation: "red",
-	price: {
-		currency: "NZD",
-		amount: 15.0,
-		tax: 0.15,
-	},
+  id: 1234,
+  name: "Metal Bottle",
+  variation: "red",
+  price: {
+    currency: "NZD",
+    amount: 15.0,
+    tax: 0.15,
+  },
 };
 ```
 
@@ -44,11 +44,11 @@ Here we have an item object that has a bunch of properties. Say we need to defin
 
 ```javascript
 function getStock(item) {
-	const id = item.id;
-	const variation = item.variation;
-	// make a fetch request to some API using the id and variation
+  const id = item.id;
+  const variation = item.variation;
+  // make a fetch request to some API using the id and variation
 
-	return stock;
+  return stock;
 }
 
 getStock(item);
@@ -58,9 +58,9 @@ Here’s an example of how that would be accomplished without object destructuri
 
 ```javascript
 function getStock({ id, variation }) {
-	// make a fetch request to some API using the id and variation
+  // make a fetch request to some API using the id and variation
 
-	return stock;
+  return stock;
 }
 
 getStock(item);
@@ -88,9 +88,9 @@ Another term that may be unfamilliar is side effects. A function with side effec
 console.log(item.name); // "Metal Bottle"
 
 function prepareItemForCheckout(item) {
-	// Processes the item data for checkout.
-	item.name = `${item.name} (${item.variation})`;
-	return;
+  // Processes the item data for checkout.
+  item.name = `${item.name} (${item.variation})`;
+  return;
 }
 
 prepareItemForCheckout(item);
@@ -104,29 +104,29 @@ Lets take a look at a more complex example.
 
 ```javascript
 const item = {
-	id: 1234,
-	name: "Metal Bottle",
-	variation: "red",
-	price: {
-		currency: "NZD",
-		amount: 15.0,
-		tax: 0.15,
-	},
+  id: 1234,
+  name: "Metal Bottle",
+  variation: "red",
+  price: {
+    currency: "NZD",
+    amount: 15.0,
+    tax: 0.15,
+  },
 };
 
 function computeTotalPrice({
-	item: {
-		price: { amount, tax },
-	},
-	firstTimeDiscount = false,
+  item: {
+    price: { amount, tax },
+  },
+  firstTimeDiscount = false,
 }) {
-	const priceWithTax = amount * (1 + tax);
+  const priceWithTax = amount * (1 + tax);
 
-	if (firstTimeDiscount) {
-		return priceWithTax * 0.9;
-	}
+  if (firstTimeDiscount) {
+    return priceWithTax * 0.9;
+  }
 
-	return priceWithTax;
+  return priceWithTax;
 }
 
 console.log(computeTotalPrice({ item })); // 17.25

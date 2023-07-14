@@ -7,75 +7,108 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="mx-gutter overflow-x-hidden">
-		<Scribbles />
-		<Header title={SITE_TITLE} />
-		<main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="mx-gutter overflow-x-hidden">
+    <Scribbles />
+    <Header title={SITE_TITLE} />
+    <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
+      <aside class="whitespace-nowrap relative">
+        <img
+          src="/dots.svg"
+          alt=""
+          class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12"
+        />
+        <p>Auckland-Based</p>
+        <p class="mb-[4.5rem]">Front-End Developer</p>
 
-			<aside class="whitespace-nowrap relative">
-				<img src="/dots.svg" alt="" class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12">
-				<p>Auckland-Based</p>
-				<p class="mb-[4.5rem]">Front-End Developer</p>
+        <h1 class="text-4xl text-b-minato mb-[4.5rem]">
+          <span class="block font-medium mb-2">陶映渠</span>
+          <span class="block">Tao Ying Qu</span>
+        </h1>
 
-				<h1 class="text-4xl text-b-minato mb-[4.5rem]">
-					<span class="block font-medium mb-2">陶映渠</span>
-					<span class="block">Tao Ying Qu</span>
-				</h1>
-
-				<span class="block text-b-willow mb-4">Designer</span>
-				{
-					Array.from({ length: 8 }).map((_,i) => (
-						<span class="block text-b-willow leading-[0]" style={
-							{
-								marginTop: (4 * (1.5 ** i) ) + "px"
- 							}
-						}>Developer</span>
-					))
-				}
-			</aside>
-			<section class="w-[32ch] text-b-gray">
-				<p class="mb-16"><span class="text-b-willow-dark">Matthew Tao</span> is a front-end developer who enjoys exploring new technologies and try to understand the underlying concepts behind them.</p>
-				<ul class="flex flex-col gap-5">
-					<li class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0">
-						<a href="/blog">Read my <span class="text-b-willow-dark">blog</span> posts</a>
-						<img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
-					</li>
-					<li class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0">
-						<a href="/projects">View my <span class="text-b-willow-dark">projects</span></a>
-						<img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
-					</li>
-					<li class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0">
-						<a href="/about">Find out more <span class="text-b-willow-dark">about me!</span></a>
-						<img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
-					</li>
-					<li class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0">
-						<a href="/contact">Get in <span class="text-b-willow-dark">contact</span></a>
-						<img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
-					</li>
-				</ul>
-			</section>
-			<aside class="w-fit whitespace-nowrap">
-				<ul class="flex flex-col gap-4 leading-[0.95] mb-9">
-					<li class="flex gap-2 items-center">
-						<img class="h-4" src="/icons/mail.svg" alt="" />
-						<a href="mailto:matthew.yingtao@gmail.com">matthew.yingtao@gmail.com</a>
-					</li>
-					<li class="flex gap-2 items-center">
-						<img class="h-4" src="/icons/github.svg" alt="" />
-						<a href="https://github.com/matthewyingtao/portfolio-tokyo">View Source</a>
-					</li>
-					<li class="flex gap-2 items-center">
-						<img class="h-4" src="/icons/linkedin.svg" alt="" />
-						<a href="https://www.linkedin.com/in/matthew-tao727">LinkedIn</a>
-					</li>
-				</ul>
-				<button class="w-full rounded-full bg-b-willow px-6 py-3 flex justify-center items-center">
-					<span class="text-xl leading-[0.95]">Get in touch!</span>
-				</button>
-			</aside>
-		</main>
-	</body>
+        <span class="block text-b-willow mb-4">Designer</span>
+        {
+          Array.from({ length: 8 }).map((_, i) => (
+            <span
+              class="block text-b-willow leading-[0]"
+              style={{
+                marginTop: 4 * 1.5 ** i + "px",
+              }}
+            >
+              Developer
+            </span>
+          ))
+        }
+      </aside>
+      <section class="w-[32ch] text-b-gray">
+        <p class="mb-16">
+          <span class="text-b-willow-dark">Matthew Tao</span> is a front-end
+          developer who enjoys exploring new technologies and try to understand
+          the underlying concepts behind them.
+        </p>
+        <ul class="flex flex-col gap-5">
+          <li
+            class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0"
+          >
+            <a href="/blog"
+              >Read my <span class="text-b-willow-dark">blog</span> posts</a
+            >
+            <img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
+          </li>
+          <li
+            class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0"
+          >
+            <a href="/projects"
+              >View my <span class="text-b-willow-dark">projects</span></a
+            >
+            <img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
+          </li>
+          <li
+            class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0"
+          >
+            <a href="/about"
+              >Find out more <span class="text-b-willow-dark">about me!</span
+              ></a
+            >
+            <img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
+          </li>
+          <li
+            class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0"
+          >
+            <a href="/contact"
+              >Get in <span class="text-b-willow-dark">contact</span></a
+            >
+            <img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
+          </li>
+        </ul>
+      </section>
+      <aside class="w-fit whitespace-nowrap">
+        <ul class="flex flex-col gap-4 leading-[0.95] mb-9">
+          <li class="flex gap-2 items-center">
+            <img class="h-4" src="/icons/mail.svg" alt="" />
+            <a href="mailto:matthew.yingtao@gmail.com"
+              >matthew.yingtao@gmail.com</a
+            >
+          </li>
+          <li class="flex gap-2 items-center">
+            <img class="h-4" src="/icons/github.svg" alt="" />
+            <a href="https://github.com/matthewyingtao/portfolio-tokyo"
+              >View Source</a
+            >
+          </li>
+          <li class="flex gap-2 items-center">
+            <img class="h-4" src="/icons/linkedin.svg" alt="" />
+            <a href="https://www.linkedin.com/in/matthew-tao727">LinkedIn</a>
+          </li>
+        </ul>
+        <button
+          class="w-full rounded-full bg-b-willow px-6 py-3 flex justify-center items-center"
+        >
+          <span class="text-xl leading-[0.95]">Get in touch!</span>
+        </button>
+      </aside>
+    </main>
+  </body>
 </html>

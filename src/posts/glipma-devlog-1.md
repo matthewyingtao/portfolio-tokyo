@@ -47,31 +47,31 @@ So far, after only around 30 minutes, I've implemented a core functionality: pas
 
 ```html
 <script>
-	import { readText } from "@tauri-apps/api/clipboard";
+  import { readText } from "@tauri-apps/api/clipboard";
 
-	let clipboardText;
+  let clipboardText;
 
-	let pressedKeys = [];
+  let pressedKeys = [];
 
-	const handleKeydown = (e) => {
-		// only add new keys
-		if (pressedKeys.includes(e.key)) {
-			return;
-		}
+  const handleKeydown = (e) => {
+    // only add new keys
+    if (pressedKeys.includes(e.key)) {
+      return;
+    }
 
-		pressedKeys = [...pressedKeys, e.key];
+    pressedKeys = [...pressedKeys, e.key];
 
-		if (pressedKeys.includes("Control") && pressedKeys.includes("v")) {
-			readText().then((text) => {
-				clipboardText = text;
-			});
-		}
-	};
+    if (pressedKeys.includes("Control") && pressedKeys.includes("v")) {
+      readText().then((text) => {
+        clipboardText = text;
+      });
+    }
+  };
 
-	// remove keys when they're released
-	const handleKeyup = (e) => {
-		pressedKeys = pressedKeys.filter((key) => key !== e.key);
-	};
+  // remove keys when they're released
+  const handleKeyup = (e) => {
+    pressedKeys = pressedKeys.filter((key) => key !== e.key);
+  };
 </script>
 
 <svelte:window on:keydown="{handleKeydown}" on:keyup="{handleKeyup}" />

@@ -40,11 +40,11 @@ You can go to the source code of any function in Rambda from the [repository on 
 
 ```javascript
 export function curry(fn, args = []) {
-	return (..._args) =>
-		((rest) => (rest.length >= fn.length ? fn(...rest) : curry(fn, rest)))([
-			...args,
-			..._args,
-		]);
+  return (..._args) =>
+    ((rest) => (rest.length >= fn.length ? fn(...rest) : curry(fn, rest)))([
+      ...args,
+      ..._args,
+    ]);
 }
 ```
 
@@ -52,13 +52,13 @@ I don't know about you, but at first glance, it seems quite cryptic what this fu
 
 ```javascript
 function curry(fn, args = []) {
-	return function (..._args) {
-		return ((rest) =>
-			rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([
-			...args,
-			..._args,
-		]);
-	};
+  return function (..._args) {
+    return ((rest) =>
+      rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([
+      ...args,
+      ..._args,
+    ]);
+  };
 }
 ```
 
@@ -79,13 +79,13 @@ Nice! Now let's step through the function calls. Firstly, `javascript±const add
 
 ```javascript
 function curry(fn, args = []) {
-	return function (..._args) {
-		return ((rest) =>
-			rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([
-			...args,
-			..._args,
-		]);
-	};
+  return function (..._args) {
+    return ((rest) =>
+      rest.length >= fn.length ? fn(...rest) : curry(fn, rest))([
+      ...args,
+      ..._args,
+    ]);
+  };
 }
 
 const add2 = curry(add, [2]);
@@ -95,9 +95,9 @@ This calls the function `curry` and returns the first statement. So, `add2` is n
 
 ```javascript
 function add2(..._args) {
-	return (function (rest) {
-		return rest.length >= add.length ? add(...rest) : curry(add, rest);
-	})([2, ..._args]);
+  return (function (rest) {
+    return rest.length >= add.length ? add(...rest) : curry(add, rest);
+  })([2, ..._args]);
 }
 ```
 
@@ -107,9 +107,9 @@ Now what happens when we do `javascript±const total = add2(3)`?
 
 ```javascript
 function add2(..._args) {
-	return (function (rest) {
-		return rest.length >= add.length ? add(...rest) : curry(add, rest);
-	})([2, ..._args]);
+  return (function (rest) {
+    return rest.length >= add.length ? add(...rest) : curry(add, rest);
+  })([2, ..._args]);
 }
 
 const total = add2(3);
