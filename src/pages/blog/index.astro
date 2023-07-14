@@ -1,66 +1,124 @@
 ---
+import { countWords } from "alfaaz";
+import matter from "gray-matter";
+import { readFile } from "node:fs/promises";
+import { basename } from "node:path";
 import slugify from "slugify";
 import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import Header from "../../components/Header.astro";
+import Scribbles from "../../components/Scribbles.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
-const posts = await Astro.glob("../../posts/*.md");
+let postsGlob = (await Astro.glob("../../posts/*.md")).map(async (p) => {
+	const post1 = await readFile(p.file);
 
-// .sort(
-// 	(a, b) =>
-// 		new Date(b.frontmatter.pubDate).valueOf() -
-// 		new Date(a.frontmatter.pubDate).valueOf()
-// );
+	const { data, content } = matter(post1);
+
+	return {
+		...p,
+		length: countWords(content),
+		slug: slugify(basename(p.file, ".md")),
+	}
+})
+
+let resolvedPosts = await Promise.all(postsGlob);
+
+
+resolvedPosts = resolvedPosts.sort(
+	(a, b) =>
+	new Date(b.frontmatter.pubDate).valueOf() -
+	new Date(a.frontmatter.pubDate).valueOf()
+);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
-			}
-			ul li {
-				display: flex;
-			}
-			ul li :global(time) {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
-			}
-			ul li a:visited {
-				color: #8e32dc;
-			}
-		</style>
 	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
+	<body class="mx-gutter overflow-x-hidden">
+		<Scribbles />
+		<Header title={SITE_TITLE} />
+		<main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
+			<aside class="whitespace-nowrap relative">
+				<img src="/dotssmall.svg" alt="" class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12">
+				{
+					Array.from({ length: 8 }).map((_,i) => (
+						<span class="block leading-[0]" style={
+							{
+								marginTop: (4 * (1.5 ** i) ) + "px"
+ 							}
+						}>Latest blog posts</span>
+					))
+				}
+			</aside>
+			<section class="w-[42ch] text-b-gray">
+				<div class="flex gap-5 mb-11">
+					<button class="px-6 py-2 leading-[0.95] rounded-md text-b-willow-dark border-b-willow-dark border">Tutorials</button>
+					<button class="px-6 py-2 leading-[0.95] rounded-md text-b-willow-dark border-b-willow-dark border">Thoughts</button>
+				</div>
+				<ul class="flex flex-col gap-16">
 					{
-						posts.map((post) => (
-							<li>
-								<FormattedDate
-									dateString={post.frontmatter.pubDate}
-								/>
+						resolvedPosts.map((post) => (
+							<li class="flex flex-col">
 								<a
-									href={`/blog/${slugify(
-										post.file.replace(/\.md(x)?/, "")
-									)}/`}
-								>
+					class="text-b-willow-dark mb-1"
+								href={`/blog/${post.slug}/`}
+									>
 									{post.frontmatter.title}
 								</a>
+								<p class="mb-4">
+									{post.frontmatter.description}
+								</p>
+
+								<div class="flex justify-between items-center text-base text-b-minato">
+									<span>
+										<FormattedDate
+											dateString={post.frontmatter.pubDate}
+										/> · {
+											post.length
+										} words · {
+											Math.ceil(post.length / 200)
+										} min read
+									</span>
+
+									<a href={
+										`/blog/${
+											post.slug
+										}/`
+								} class="underline">read more</a>
+								</div>
 							</li>
 						))
 					}
 				</ul>
 			</section>
+			<aside class="w-fit whitespace-nowrap">
+				<div class="flex flex-col mb-12 leading-[0.95] gap-3">
+					<span class="text-b-minato">Auckland-Based</span>
+					<span class="text-b-minato">Front-End Developer</span>
+					<span>Matthew Tao</span>
+				</div>
+
+				<ul class="flex flex-col gap-3 leading-[0.95] mb-9">
+					<li class="flex gap-2 items-center">
+						<img class="h-4" src="/icons/mail.svg" alt="" />
+						<a href="mailto:matthew.yingtao@gmail.com">matthew.yingtao@gmail.com</a>
+					</li>
+					<li class="flex gap-2 items-center">
+						<img class="h-4" src="/icons/github.svg" alt="" />
+						<a href="https://github.com/matthewyingtao/portfolio-tokyo">View Source</a>
+					</li>
+					<li class="flex gap-2 items-center">
+						<img class="h-4" src="/icons/linkedin.svg" alt="" />
+						<a href="https://www.linkedin.com/in/matthew-tao727">LinkedIn</a>
+					</li>
+				</ul>
+				<button class="w-full rounded-full bg-b-willow px-6 py-3 flex justify-center items-center">
+					<span class="text-xl leading-[0.95]">Get in touch!</span>
+				</button>
+			</aside>
 		</main>
-		<Footer />
 	</body>
 </html>

@@ -1,4 +1,5 @@
 ---
+import { basename } from "node:path";
 import slugify from "slugify";
 import BlogPost from "../../layouts/BlogPost.astro";
 
@@ -7,7 +8,7 @@ export async function getStaticPaths() {
 
 	return posts.map((post) => ({
 		params: {
-			slug: slugify(post.file.replace(/\.md(x)?/, "")),
+			slug: slugify(basename(post.file, ".md")),
 		},
 		props: { post },
 	}));
