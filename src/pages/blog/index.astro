@@ -13,7 +13,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 let postsGlob = (await Astro.glob("../../posts/*.md")).map(async (p) => {
 	const post1 = await readFile(p.file);
 
-	const { data, content } = matter(post1);
+	const { content } = matter(post1);
 
 	return {
 		...p,

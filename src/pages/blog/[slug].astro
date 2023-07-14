@@ -1,23 +1,39 @@
 ---
+import { countWords } from "alfaaz";
+import matter from "gray-matter";
+import { readFile } from "node:fs/promises";
 import { basename } from "node:path";
 import slugify from "slugify";
 import BlogPost from "../../layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
-	const posts = await Astro.glob("../../posts/*.{md,mdx}");
+	const glob = (await Astro.glob("../../posts/*.{md,mdx}")).map(async (p) => {
+		const post = await readFile(p.file);
 
-	return posts.map((post) => ({
-		params: {
-			slug: slugify(basename(post.file, ".md")),
-		},
-		props: { post },
-	}));
+		const { content } = matter(post);
+
+		return {
+			params: {
+				slug: slugify(basename(p.file, ".md")),
+			},
+			props: {
+				post: {
+					...p,
+					frontmatter: {
+						...p.frontmatter,
+						length: countWords(content),
+					}
+				},
+			},
+		};
+	});
+
+	return await Promise.all(glob);
 }
 
 const { frontmatter, Content } = Astro.props.post;
 ---
 
 <BlogPost {...frontmatter}>
-	<h1>{frontmatter.title}</h1>
 	<Content />
 </BlogPost>
