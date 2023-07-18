@@ -4,6 +4,7 @@ description: How to use Tauri's fs API to store persistent data with JavaScript.
 pubDate: 2022-02-18T11:00:00.000Z
 lastEdit: 2022-02-18T11:00:00.000Z
 heroImage: /uploads/part2Progress.png
+layout: ../../../layouts/BlogPost.astro
 ---
 
 ## Introduction

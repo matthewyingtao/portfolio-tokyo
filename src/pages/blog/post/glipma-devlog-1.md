@@ -7,17 +7,18 @@ description: >-
 pubDate: 2022-02-17T11:00:00.000Z
 lastEdit: 2022-02-17T11:00:00.000Z
 heroImage: /uploads/part1Progress.png
+layout: ../../../layouts/BlogPost.astro
 ---
 
 ## Introduction
 
 It's quite common for me to want to save a link or idea for later. Common things I want to save are:
 
-- Images that I want to save for later.
-- Snippets of code that I frequently use and forget.
-- Thoughts I have at 11pm at night which I need to write down or else my brain won't let me sleep.
-- Books I want to read at some point.
-- Awful jokes I think of in the shower.
+* Images that I want to save for later.
+* Snippets of code that I frequently use and forget.
+* Thoughts I have at 11pm at night which I need to write down or else my brain won't let me sleep.
+* Books I want to read at some point.
+* Awful jokes I think of in the shower.
 
 And many more. In the past I've used a private Discord server to store it all, but it hasn't been the ideal solution for a few reasons.
 
@@ -31,11 +32,11 @@ I've decided to make my own note keeping/clipboard manager desktop app. I'll be 
 
 ### Main Features
 
-- Persistent data storage, can access offline.
-- Tagging system, where you can filter by tags.
-- Search functionality.
-- Categories.
-- A visually appealing design. (Not sure what direction I'll take it at this point)
+* Persistent data storage, can access offline.
+* Tagging system, where you can filter by tags.
+* Search functionality.
+* Categories.
+* A visually appealing design. (Not sure what direction I'll take it at this point)
 
 ## The progress so far
 

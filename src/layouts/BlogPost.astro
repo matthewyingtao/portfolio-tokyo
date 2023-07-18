@@ -4,17 +4,19 @@ import FormattedDate from "../components/FormattedDate.astro";
 import Header from "../components/Header.astro";
 import Scribbles from "../components/Scribbles.astro";
 
-export interface Props {
+import type { MarkdownLayoutProps } from "astro";
+
+type Props = MarkdownLayoutProps<{
   title: string;
   description: string;
   pubDate: string;
   lastEdit: string;
   heroImage: string;
   length: number;
-}
+}>;
 
 const { title, description, pubDate, lastEdit, heroImage, length } =
-  Astro.props;
+  Astro.props.frontmatter;
 ---
 
 <!DOCTYPE html>
@@ -44,7 +46,7 @@ const { title, description, pubDate, lastEdit, heroImage, length } =
           </span>
         </div>
       </aside>
-      <section class="w-[42ch] text-b-gray">
+      <section class="w-[55ch] text-b-gray content-md">
         {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
         <FormattedDate dateString={pubDate} />
 

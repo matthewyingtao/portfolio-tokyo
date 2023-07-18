@@ -6,6 +6,7 @@ description: >-
 pubDate: 2022-02-15T11:00:00.000Z
 lastEdit: 2022-02-15T11:00:00.000Z
 heroImage: /uploads/dGwDhpRTrDNd3gFybvTvQy;303x117.jpeg
+layout: ../../../layouts/BlogPost.astro
 ---
 
 ## What is currying and how do I use it?

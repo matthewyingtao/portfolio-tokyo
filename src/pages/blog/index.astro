@@ -10,7 +10,7 @@ import Header from "../../components/Header.astro";
 import Scribbles from "../../components/Scribbles.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
-let postsGlob = (await Astro.glob("../../posts/*.md")).map(async (p) => {
+let postsGlob = (await Astro.glob("./post/*.md")).map(async (p) => {
   const post1 = await readFile(p.file);
 
   const { content } = matter(post1);
@@ -74,7 +74,10 @@ resolvedPosts = resolvedPosts.sort(
           {
             resolvedPosts.map((post) => (
               <li class="flex flex-col">
-                <a class="text-b-willow-dark mb-1" href={`/blog/${post.slug}/`}>
+                <a
+                  class="text-b-willow-dark mb-1"
+                  href={`/blog/post/${post.slug}`}
+                >
                   {post.frontmatter.title}
                 </a>
                 <p class="mb-4">{post.frontmatter.description}</p>
@@ -86,7 +89,7 @@ resolvedPosts = resolvedPosts.sort(
                     read
                   </span>
 
-                  <a href={`/blog/${post.slug}/`} class="underline">
+                  <a href={`/blog/post/${post.slug}`} class="underline">
                     read more
                   </a>
                 </div>

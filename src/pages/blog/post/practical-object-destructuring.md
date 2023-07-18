@@ -4,6 +4,7 @@ description: Practical examples of how to use object destructuring in JavaScript
 pubDate: 2022-02-08T11:00:00.000Z
 lastEdit: 2022-02-08T11:00:00.000Z
 heroImage: /uploads/codeSuggestion.png
+layout: ../../../layouts/BlogPost.astro
 ---
 
 ## What is object destructuring?

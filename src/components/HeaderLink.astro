@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a"> & {
-	activeClass?: string;
+  activeClass?: string;
 };
 
 const { href, class: className, activeClass, ...props } = Astro.props;
@@ -14,5 +14,5 @@ const computedClass = isActive ? activeClass : "";
 ---
 
 <a href={href} class:list={[className, computedClass]} {...props}>
-	<slot />
+  <slot />
 </a>
