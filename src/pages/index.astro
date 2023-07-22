@@ -1,7 +1,8 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Scribbles from "../components/Scribbles.astro";
+import BaseHead from "../components/layout/BaseHead.astro";
+import ExpandedContact from "../components/layout/ExpandedContact.astro";
+import Header from "../components/layout/Header.astro";
+import Scribbles from "../components/layout/Scribbles.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
@@ -11,6 +12,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="mx-gutter overflow-x-hidden">
+    <div class="noise"></div>
     <Scribbles />
     <Header title={SITE_TITLE} />
     <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
@@ -23,7 +25,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
         <p>Auckland-Based</p>
         <p class="mb-[4.5rem]">Front-End Developer</p>
 
-        <h1 class="text-4xl text-b-minato mb-[4.5rem]">
+        <h1 class="text-4xl text-b-minato mb-[4.5rem] leading-none">
           <span class="block font-medium mb-2">陶映渠</span>
           <span class="block">Tao Ying Qu</span>
         </h1>
@@ -42,11 +44,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
           ))
         }
       </aside>
-      <section class="w-[32ch] text-b-gray">
+      <section class="w-[32ch] text-b-gray mb-20" transition:name="content">
         <p class="mb-16">
           <span class="text-b-willow-dark">Matthew Tao</span> is a front-end
-          developer who enjoys exploring new technologies and try to understand
-          the underlying concepts behind them.
+          developer who enjoys exploring new technologies and tries to
+          understand the underlying concepts behind them.
         </p>
         <ul class="flex flex-col gap-5">
           <li
@@ -84,31 +86,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
           </li>
         </ul>
       </section>
-      <aside class="w-fit whitespace-nowrap">
-        <ul class="flex flex-col gap-4 leading-[0.95] mb-9">
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/mail.svg" alt="" />
-            <a href="mailto:matthew.yingtao@gmail.com"
-              >matthew.yingtao@gmail.com</a
-            >
-          </li>
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/github.svg" alt="" />
-            <a href="https://github.com/matthewyingtao/portfolio-tokyo"
-              >View Source</a
-            >
-          </li>
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/linkedin.svg" alt="" />
-            <a href="https://www.linkedin.com/in/matthew-tao727">LinkedIn</a>
-          </li>
-        </ul>
-        <button
-          class="w-full rounded-full bg-b-willow px-6 py-3 flex justify-center items-center"
-        >
-          <span class="text-xl leading-[0.95]">Get in touch!</span>
-        </button>
-      </aside>
+      <ExpandedContact />
     </main>
   </body>
 </html>

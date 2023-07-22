@@ -1,21 +1,23 @@
 /** @type {import('tailwindcss').Config} */
+const lineHeight = "calc(1.2em + 1ex)";
+
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontSize: {
-      xs: ["0.75rem", "calc(1em + 1ex)"],
-      sm: ["0.875rem", "calc(1em + 1ex)"],
-      base: ["1rem", "calc(1em + 1ex)"],
-      lg: ["1.125rem", "calc(1em + 1ex)"],
-      xl: ["1.25rem", "calc(1em + 1ex)"],
-      "2xl": ["1.5rem", "calc(1em + 1ex)"],
-      "3xl": ["1.875rem", "calc(1em + 1ex)"],
-      "4xl": ["2.25rem", "calc(1em + 1ex)"],
-      "5xl": ["3rem", "calc(1em + 1ex)"],
-      "6xl": ["3.75rem", "calc(1em + 1ex)"],
-      "7xl": ["4.5rem", "calc(1em + 1ex)"],
-      "8xl": ["6rem", "calc(1em + 1ex)"],
-      "9xl": ["8rem", "calc(1em + 1ex)"],
+      xs: ["0.75rem", lineHeight],
+      sm: ["0.875rem", lineHeight],
+      base: ["1rem", lineHeight],
+      lg: ["1.125rem", lineHeight],
+      xl: ["1.25rem", lineHeight],
+      "2xl": ["1.5rem", lineHeight],
+      "3xl": ["1.875rem", lineHeight],
+      "4xl": ["2.25rem", lineHeight],
+      "5xl": ["3rem", lineHeight],
+      "6xl": ["3.75rem", lineHeight],
+      "7xl": ["4.5rem", lineHeight],
+      "8xl": ["6rem", lineHeight],
+      "9xl": ["8rem", lineHeight],
     },
     extend: {
       colors: {
@@ -31,6 +33,21 @@ module.exports = {
       },
       gridTemplateColumns: {
         14: "var(--gutter) repeat(12, minmax(0, 1fr)) var(--gutter)",
+      },
+      keyframes: {
+        "fade-up": {
+          "0%": {
+            opacity: "0",
+            transform: "0.5rem",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.15s ease-in-out",
       },
     },
   },

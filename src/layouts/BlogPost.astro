@@ -1,8 +1,10 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import { countWords } from "alfaaz";
 import FormattedDate from "../components/FormattedDate.astro";
-import Header from "../components/Header.astro";
-import Scribbles from "../components/Scribbles.astro";
+import BaseHead from "../components/layout/BaseHead.astro";
+import ExpandedContact from "../components/layout/ExpandedContact.astro";
+import Header from "../components/layout/Header.astro";
+import Scribbles from "../components/layout/Scribbles.astro";
 
 import type { MarkdownLayoutProps } from "astro";
 
@@ -15,8 +17,10 @@ type Props = MarkdownLayoutProps<{
   length: number;
 }>;
 
-const { title, description, pubDate, lastEdit, heroImage, length } =
+const { title, description, pubDate, lastEdit, heroImage } =
   Astro.props.frontmatter;
+
+const length = countWords(Astro.props.rawContent());
 ---
 
 <!DOCTYPE html>
@@ -25,6 +29,7 @@ const { title, description, pubDate, lastEdit, heroImage, length } =
     <BaseHead title={title} description={description} />
   </head>
   <body class="mx-gutter overflow-x-hidden">
+    <div class="noise"></div>
     <Scribbles />
     <Header title={title} />
     <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
@@ -46,46 +51,13 @@ const { title, description, pubDate, lastEdit, heroImage, length } =
           </span>
         </div>
       </aside>
-      <section class="w-[55ch] text-b-gray content-md">
-        {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-        <FormattedDate dateString={pubDate} />
-
-        <div class="last-updated-on">
-          Last updated on <FormattedDate dateString={lastEdit} />
-        </div>
+      <section
+        class="w-[55ch] text-b-gray content-md mb-20"
+        transition:name="content"
+      >
         <slot />
       </section>
-      <aside class="w-fit whitespace-nowrap">
-        <div class="flex flex-col mb-12 leading-[0.95] gap-3">
-          <span class="text-b-minato">Auckland-Based</span>
-          <span class="text-b-minato">Front-End Developer</span>
-          <span>Matthew Tao</span>
-        </div>
-
-        <ul class="flex flex-col gap-3 leading-[0.95] mb-9">
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/mail.svg" alt="" />
-            <a href="mailto:matthew.yingtao@gmail.com"
-              >matthew.yingtao@gmail.com</a
-            >
-          </li>
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/github.svg" alt="" />
-            <a href="https://github.com/matthewyingtao/portfolio-tokyo"
-              >View Source</a
-            >
-          </li>
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/linkedin.svg" alt="" />
-            <a href="https://www.linkedin.com/in/matthew-tao727">LinkedIn</a>
-          </li>
-        </ul>
-        <button
-          class="w-full rounded-full bg-b-willow px-6 py-3 flex justify-center items-center"
-        >
-          <span class="text-xl leading-[0.95]">Get in touch!</span>
-        </button>
-      </aside>
+      <ExpandedContact />
     </main>
   </body>
 </html>

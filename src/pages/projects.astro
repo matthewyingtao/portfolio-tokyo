@@ -1,0 +1,66 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+import BaseHead from "../components/layout/BaseHead.astro";
+import ExpandedContact from "../components/layout/ExpandedContact.astro";
+import Header from "../components/layout/Header.astro";
+import Scribbles from "../components/layout/Scribbles.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+import { projects } from "../data/projects/projects.json";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="mx-gutter overflow-x-hidden">
+    <div class="noise"></div>
+    <Scribbles />
+    <Header title={SITE_TITLE} />
+    <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
+      <aside class="whitespace-nowrap relative">
+        <img
+          src="/dotssmall.svg"
+          alt=""
+          class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12"
+        />
+        {
+          Array.from({ length: 8 }).map((_, i) => {
+            const offset = 4 * 1.5 ** i;
+
+            return (
+              <span
+                class="block leading-[0] translate-y-1"
+                style={{
+                  marginTop: offset + "px",
+                }}
+              >
+                Projects
+              </span>
+            );
+          })
+        }
+      </aside>
+      <section class="w-[42ch] mb-20" transition:name="content">
+        <ul class="flex flex-col gap-12">
+          {
+            projects.map(({ title, image, date, description }) => (
+              <div class="flex flex-col gap-5">
+                <div class="flex justify-between leading-[0.95]">
+                  <h2>{title}</h2>
+                  <FormattedDate dateString={date} class="text-b-minato" />
+                </div>
+
+                <img src={image} alt="" />
+
+                <p>{description}</p>
+              </div>
+            ))
+          }
+        </ul>
+      </section>
+      <ExpandedContact />
+    </main>
+  </body>
+</html>

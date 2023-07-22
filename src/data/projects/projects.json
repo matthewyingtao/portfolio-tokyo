@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "title": "Environ",
+      "description": "An app that utilises AI to encourage recycling.",
+      "date": "2023-06-29T12:00:00.000Z",
+      "image": "/uploads/environ.webp"
+    },
+    {
+      "title": "blogg",
+      "description": "A blog that I made to learn more about developing Flutter apps.",
+      "date": "2023-06-29T12:00:00.000Z",
+      "image": "/uploads/blogg.webp"
+    },
+    {
+      "title": "Gif Creator",
+      "description": "A simple web app that allows you to create meme gifs from images or videos.",
+      "date": "2023-06-29T12:00:00.000Z",
+      "image": "/uploads/gif.webp"
+    }
+  ]
+}

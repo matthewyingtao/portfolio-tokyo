@@ -1,0 +1,42 @@
+---
+const navLinks = [
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/blog",
+    text: "Blog",
+  },
+  {
+    href: "/projects",
+    text: "Projects",
+  },
+  {
+    href: "/about",
+    text: "About",
+  },
+];
+
+const { pathname } = Astro.url;
+---
+
+<header>
+  <nav class="pt-12 pb-24 flex gap-16">
+    {
+      navLinks.map(({ href, text }) => {
+        const isActive =
+          href === pathname || href === pathname.replace(/\/$/, "");
+
+        return (
+          <a href={href} class="relative isolate">
+            {isActive && (
+              <div class="absolute bg-b-willow h-11 w-11 rounded-full -left-4 -top-[0.875rem] -z-10" />
+            )}
+            {text}
+          </a>
+        );
+      })
+    }
+  </nav>
+</header>

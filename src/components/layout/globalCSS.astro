@@ -6,7 +6,7 @@
 
   body {
     font-family: "PP Mori", sans-serif;
-    line-height: calc(1em + 1ex);
+    line-height: calc(1.2em + 1ex);
     @apply bg-b-white text-b-willow-dark text-lg;
   }
 
@@ -126,32 +126,36 @@
     font-display: optional;
   }
 
-  .content-md h1 {
-    @apply text-3xl mt-4 text-b-gray;
-  }
-
-  .content-md h2 {
-    @apply text-2xl mt-4 text-b-gray;
-  }
-
-  .content-md h3 {
-    @apply text-xl text-b-gray;
-  }
-
-  .content-md h4 {
-    @apply text-lg text-b-gray;
-  }
-
-  .content-md h5 {
-    @apply text-base text-b-gray;
-  }
-
   .content-md {
     @apply text-b-willow-dark;
   }
 
+  .content-md > :first-child {
+    @apply leading-[0.95] mt-0;
+  }
+
+  .content-md h1 {
+    @apply text-3xl mb-[0.75ex] mt-[1.25em] text-b-gray;
+  }
+
+  .content-md h2 {
+    @apply text-2xl mb-[0.75ex] mt-[1.25em] text-b-gray;
+  }
+
+  .content-md h3 {
+    @apply text-xl mb-[0.75ex] mt-[1.25em] text-b-gray;
+  }
+
+  .content-md h4 {
+    @apply text-lg mb-[0.75ex] mt-[1.25em] text-b-gray;
+  }
+
+  .content-md h5 {
+    @apply text-base mb-[0.75ex] mt-[1.25em] text-b-gray;
+  }
+
   .content-md p {
-    @apply mb-2;
+    @apply mb-[0.75ex] mt-[0.8ex];
   }
 
   .content-md pre {
@@ -160,5 +164,26 @@
 
   .content-md img {
     @apply mb-6;
+  }
+
+  .content-md ul {
+    @apply list-disc list-inside;
+  }
+
+  .content-md ol {
+    @apply list-decimal list-inside;
+  }
+
+  .noise {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    mix-blend-mode: overlay;
+    background-image: url(/noise.webp);
+    pointer-events: none;
+  }
+
+  .green-fade {
+    background: linear-gradient(180deg, #c8d5bb 0%, #e0f3cd 100%);
   }
 </style>

@@ -1,10 +1,11 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import GlobalCSS from "./globalCSS.astro";
 
 export interface Props {
-	title: string;
-	description: string;
-	image?: string;
+  title: string;
+  description: string;
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -41,3 +42,4 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <GlobalCSS />
+<ViewTransitions />

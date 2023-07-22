@@ -4,10 +4,10 @@ import matter from "gray-matter";
 import { readFile } from "node:fs/promises";
 import { basename } from "node:path";
 import slugify from "slugify";
-import BaseHead from "../../components/BaseHead.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
-import Header from "../../components/Header.astro";
-import Scribbles from "../../components/Scribbles.astro";
+import BaseHead from "../../components/layout/BaseHead.astro";
+import Header from "../../components/layout/Header.astro";
+import Scribbles from "../../components/layout/Scribbles.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
 let postsGlob = (await Astro.glob("./post/*.md")).map(async (p) => {
@@ -37,6 +37,7 @@ resolvedPosts = resolvedPosts.sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="mx-gutter overflow-x-hidden">
+    <div class="noise"></div>
     <Scribbles />
     <Header title={SITE_TITLE} />
     <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
@@ -47,19 +48,24 @@ resolvedPosts = resolvedPosts.sort(
           class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12"
         />
         {
-          Array.from({ length: 8 }).map((_, i) => (
-            <span
-              class="block leading-[0]"
-              style={{
-                marginTop: 4 * 1.5 ** i + "px",
-              }}
-            >
-              Latest blog posts
-            </span>
-          ))
+          Array.from({ length: 8 }).map((_, i) => {
+            const offset = 4 * 1.5 ** i;
+
+            // translate-y-1 is to line-up with line-height: 0
+            return (
+              <span
+                class="block leading-[0] translate-y-1"
+                style={{
+                  marginTop: offset + "px",
+                }}
+              >
+                Latest blog posts
+              </span>
+            );
+          })
         }
       </aside>
-      <section class="w-[42ch] text-b-gray">
+      <section class="w-[42ch] text-b-gray mb-20" transition:name="content">
         <div class="flex gap-5 mb-11">
           <button
             class="px-6 py-2 leading-[0.95] rounded-md text-b-willow-dark border-b-willow-dark border"
@@ -98,7 +104,7 @@ resolvedPosts = resolvedPosts.sort(
           }
         </ul>
       </section>
-      <aside class="w-fit whitespace-nowrap">
+      <aside class="w-fit whitespace-nowrap" transition:name="right-aside">
         <div class="flex flex-col mb-12 leading-[0.95] gap-3">
           <span class="text-b-minato">Auckland-Based</span>
           <span class="text-b-minato">Front-End Developer</span>

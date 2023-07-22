@@ -84,7 +84,22 @@ export default defineConfig({
         name: "pages",
         label: "Pages",
         path: "src/pages",
+        match: {
+          exclude: "blog/**/**",
+        },
+        defaultItem() {
+          return {
+            layout: "../layouts/BlogPost.astro",
+          };
+        },
         fields: [
+          {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+            required: true,
+            options: ["../layouts/BlogPost.astro"],
+          },
           {
             type: "string",
             name: "title",
@@ -122,6 +137,58 @@ export default defineConfig({
             name: "body",
             label: "Body",
             isBody: true,
+          },
+        ],
+      },
+      {
+        name: "projects",
+        label: "Projects",
+        path: "src/data/projects",
+        format: "json",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
+        fields: [
+          {
+            label: "Projects",
+            name: "projects",
+            type: "object",
+            list: true,
+            ui: {
+              itemProps: ({ title }) => {
+                return { label: title || "" };
+              },
+            },
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "string",
+                name: "description",
+                label: "Description",
+                required: true,
+              },
+              {
+                type: "datetime",
+                name: "date",
+                label: "Date",
+                required: true,
+              },
+              {
+                type: "image",
+                name: "image",
+                label: "Image",
+                required: true,
+              },
+            ],
           },
         ],
       },
