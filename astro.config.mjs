@@ -4,11 +4,9 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 import themeRosePineDawn from "/src/rose-pine-dawn-color-theme.json";
 
-import prefetch from "@astrojs/prefetch";
-
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://www.matthewtao.com",
   integrations: [
     mdx({
       syntaxHighlight: "shiki",
@@ -17,7 +15,6 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    prefetch(),
   ],
   markdown: {
     shikiConfig: {

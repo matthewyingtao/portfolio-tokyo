@@ -29,7 +29,7 @@ const { pathname } = Astro.url;
           href === pathname || href === pathname.replace(/\/$/, "");
 
         return (
-          <a href={href} class="relative isolate" rel="prefetch-intent">
+          <a href={href} class="relative isolate" >
             {isActive && (
               <div class="absolute bg-b-willow h-11 w-11 rounded-full -left-4 -top-[0.875rem] -z-10" />
             )}
