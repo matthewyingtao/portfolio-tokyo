@@ -22,7 +22,4 @@ export default defineConfig({
       theme: themeRosePineDawn,
     },
   },
-  experimental: {
-    viewTransitions: true,
-  },
 });

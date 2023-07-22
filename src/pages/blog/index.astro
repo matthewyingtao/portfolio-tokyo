@@ -6,9 +6,10 @@ import { basename } from "node:path";
 import slugify from "slugify";
 import FormattedDate from "../../components/FormattedDate.astro";
 import BaseHead from "../../components/layout/BaseHead.astro";
+import ExpandedContact from "../../components/layout/ExpandedContact.astro";
 import Header from "../../components/layout/Header.astro";
 import Scribbles from "../../components/layout/Scribbles.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+import { SITE_DESCRIPTION, siteTitle } from "../../consts";
 
 let postsGlob = (await Astro.glob("./post/*.md")).map(async (p) => {
   const post1 = await readFile(p.file);
@@ -34,14 +35,14 @@ resolvedPosts = resolvedPosts.sort(
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={siteTitle("Blog")} description={SITE_DESCRIPTION} />
   </head>
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>
     <Scribbles />
-    <Header title={SITE_TITLE} />
+    <Header />
     <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
-      <aside class="whitespace-nowrap relative">
+      <aside class="whitespace-nowrap relative mt-2">
         <img
           src="/dotssmall.svg"
           alt=""
@@ -65,7 +66,7 @@ resolvedPosts = resolvedPosts.sort(
           })
         }
       </aside>
-      <section class="w-[42ch] text-b-gray mb-20" transition:name="content">
+      <section class="w-[42ch] text-b-gray mb-20 mt-2">
         <div class="flex gap-5 mb-11">
           <button
             class="px-6 py-2 leading-[0.95] rounded-md text-b-willow-dark border-b-willow-dark border"
@@ -104,37 +105,7 @@ resolvedPosts = resolvedPosts.sort(
           }
         </ul>
       </section>
-      <aside class="w-fit whitespace-nowrap" transition:name="right-aside">
-        <div class="flex flex-col mb-12 leading-[0.95] gap-3">
-          <span class="text-b-minato">Auckland-Based</span>
-          <span class="text-b-minato">Front-End Developer</span>
-          <span>Matthew Tao</span>
-        </div>
-
-        <ul class="flex flex-col gap-3 leading-[0.95] mb-9">
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/mail.svg" alt="" />
-            <a href="mailto:matthew.yingtao@gmail.com"
-              >matthew.yingtao@gmail.com</a
-            >
-          </li>
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/github.svg" alt="" />
-            <a href="https://github.com/matthewyingtao/portfolio-tokyo"
-              >View Source</a
-            >
-          </li>
-          <li class="flex gap-2 items-center">
-            <img class="h-4" src="/icons/linkedin.svg" alt="" />
-            <a href="https://www.linkedin.com/in/matthew-tao727">LinkedIn</a>
-          </li>
-        </ul>
-        <button
-          class="w-full rounded-full bg-b-willow px-6 py-3 flex justify-center items-center"
-        >
-          <span class="text-xl leading-[0.95]">Get in touch!</span>
-        </button>
-      </aside>
+      <ExpandedContact />
     </main>
   </body>
 </html>

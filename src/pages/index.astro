@@ -14,7 +14,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>
     <Scribbles />
-    <Header title={SITE_TITLE} />
+    <Header />
     <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
       <aside class="whitespace-nowrap relative">
         <img
@@ -44,7 +44,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
           ))
         }
       </aside>
-      <section class="w-[32ch] text-b-gray mb-20" transition:name="content">
+      <section class="w-[32ch] text-b-gray mb-20">
         <p class="mb-16">
           <span class="text-b-willow-dark">Matthew Tao</span> is a front-end
           developer who enjoys exploring new technologies and tries to
