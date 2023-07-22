@@ -84,6 +84,7 @@ resolvedPosts = resolvedPosts.sort(
                 <a
                   class="text-b-willow-dark mb-1"
                   href={`/blog/post/${post.slug}`}
+                  rel="prefetch-intent"
                 >
                   {post.frontmatter.title}
                 </a>
@@ -96,7 +97,7 @@ resolvedPosts = resolvedPosts.sort(
                     read
                   </span>
 
-                  <a href={`/blog/post/${post.slug}`} class="underline">
+                  <a href={`/blog/post/${post.slug}`} rel="prefetch-intent" class="underline">
                     read more
                   </a>
                 </div>
