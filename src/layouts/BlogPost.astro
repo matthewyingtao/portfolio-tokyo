@@ -33,14 +33,16 @@ const length = countWords(Astro.props.rawContent());
     <div class="noise"></div>
     <Scribbles />
     <Header title={title} />
-    <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
-      <aside class="relative">
+    <main
+      class="flex gap-12 xl:gap-24 flex-nowrap flex-col md:flex-row justify-center items-center md:items-start md:justify-start mb-20"
+    >
+      <aside class="hidden lg:block max-w-[18ch] sticky top-8 h-fit">
         <img
           src="/dotssmall.svg"
           alt=""
           class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12"
         />
-        <h1 class="w-[18ch] mb-[4.5rem]">{title}</h1>
+        <h1 class="mb-[4.5rem]">{title}</h1>
 
         <div class="flex flex-col">
           <FormattedDate dateString={pubDate} />
@@ -52,7 +54,9 @@ const length = countWords(Astro.props.rawContent());
           </span>
         </div>
       </aside>
-      <section class="w-[55ch] text-b-gray content-md mb-20 mt-2">
+      <section
+        class="w-full max-w-[55ch] text-b-gray content-md mb-20 mt-2 flex-grow md:w-0"
+      >
         <slot />
       </section>
       <ExpandedContact />

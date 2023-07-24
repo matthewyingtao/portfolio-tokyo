@@ -41,8 +41,10 @@ resolvedPosts = resolvedPosts.sort(
     <div class="noise"></div>
     <Scribbles />
     <Header />
-    <main class="grid grid-cols-[repeat(3,auto)] gap-24 justify-start">
-      <aside class="whitespace-nowrap relative mt-2">
+    <main
+      class="flex gap-12 xl:gap-24 flex-wrap md:flex-nowrap justify-center md:justify-start mb-20"
+    >
+      <aside class="whitespace-nowrap mt-2 hidden lg:block sticky top-8 h-fit">
         <img
           src="/dotssmall.svg"
           alt=""
@@ -66,17 +68,12 @@ resolvedPosts = resolvedPosts.sort(
           })
         }
       </aside>
-      <section class="w-[42ch] text-b-gray mb-20 mt-2">
-        <div class="flex gap-5 mb-11">
-          <button
-            class="px-6 py-2 leading-[0.95] rounded-md text-b-willow-dark border-b-willow-dark border"
-            >Tutorials</button
-          >
-          <button
-            class="px-6 py-2 leading-[0.95] rounded-md text-b-willow-dark border-b-willow-dark border"
-            >Thoughts</button
-          >
-        </div>
+      <section class="w-[42ch] text-b-gray mt-2">
+        <h1
+          class="text-b-willow-dark mb-8 lg:sr-only underline underline-offset-2"
+        >
+          Latest blog posts
+        </h1>
         <ul class="flex flex-col gap-16">
           {
             resolvedPosts.map((post) => (
@@ -84,7 +81,6 @@ resolvedPosts = resolvedPosts.sort(
                 <a
                   class="text-b-willow-dark mb-1"
                   href={`/blog/post/${post.slug}`}
-
                 >
                   {post.frontmatter.title}
                 </a>
@@ -97,7 +93,7 @@ resolvedPosts = resolvedPosts.sort(
                     read
                   </span>
 
-                  <a href={`/blog/post/${post.slug}`}  class="underline">
+                  <a href={`/blog/post/${post.slug}`} class="underline">
                     read more
                   </a>
                 </div>
