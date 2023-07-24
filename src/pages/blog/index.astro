@@ -9,7 +9,6 @@ import BaseHead from "../../components/layout/BaseHead.astro";
 import ExpandedContact from "../../components/layout/ExpandedContact.astro";
 import Header from "../../components/layout/Header.astro";
 import Scribbles from "../../components/layout/Scribbles.astro";
-import { SITE_DESCRIPTION, siteTitle } from "../../consts";
 
 let postsGlob = (await Astro.glob("./post/*.md")).map(async (p) => {
   const post1 = await readFile(p.file);
@@ -35,7 +34,10 @@ resolvedPosts = resolvedPosts.sort(
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={siteTitle("Blog")} description={SITE_DESCRIPTION} />
+    <BaseHead
+      title={"Blog Posts"}
+      description="Matthew Tao's blog, a collection of in progress writings on anything that interest me."
+    />
   </head>
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>

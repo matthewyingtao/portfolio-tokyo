@@ -7,7 +7,6 @@ import Header from "../components/layout/Header.astro";
 import Scribbles from "../components/layout/Scribbles.astro";
 
 import type { MarkdownLayoutProps } from "astro";
-import { siteTitle } from "../consts";
 
 type Props = MarkdownLayoutProps<{
   title: string;
@@ -27,7 +26,13 @@ const length = countWords(Astro.props.rawContent());
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={siteTitle(title)} description={description} />
+    <BaseHead
+      title={title}
+      description={description}
+      publishedTime={pubDate}
+      modifiedTime={lastEdit}
+      image={heroImage}
+    />
   </head>
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>
@@ -55,7 +60,7 @@ const length = countWords(Astro.props.rawContent());
         </div>
       </aside>
       <section
-        class="w-full max-w-[55ch] text-b-gray content-md mb-20 mt-2 flex-grow md:w-0"
+        class="w-full max-w-[55ch] text-b-gray content-md mt-2 flex-grow md:w-0"
       >
         <slot />
       </section>

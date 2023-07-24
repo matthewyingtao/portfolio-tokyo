@@ -4,7 +4,6 @@ import BaseHead from "../components/layout/BaseHead.astro";
 import ExpandedContact from "../components/layout/ExpandedContact.astro";
 import Header from "../components/layout/Header.astro";
 import Scribbles from "../components/layout/Scribbles.astro";
-import { SITE_DESCRIPTION, siteTitle } from "../consts";
 
 import { projects } from "../data/projects/projects.json";
 ---
@@ -12,7 +11,10 @@ import { projects } from "../data/projects/projects.json";
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={siteTitle("Projects")} description={SITE_DESCRIPTION} />
+    <BaseHead
+      title="Projects"
+      description="A curated selection of Matthew Tao's best projects."
+    />
   </head>
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>
@@ -44,7 +46,7 @@ import { projects } from "../data/projects/projects.json";
           })
         }
       </aside>
-      <section class="w-[42ch] mb-20 mt-2">
+      <section class="w-[42ch] mt-2">
         <ul class="flex flex-col gap-12">
           {
             projects.map(({ title, image, date, description }) => (
