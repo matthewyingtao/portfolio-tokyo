@@ -22,7 +22,7 @@ const { pathname } = Astro.url;
 ---
 
 <header>
-  <nav class="pt-12 pb-24 flex gap-16 justify-center md:justify-start">
+  <nav class="pt-12 pb-24 flex gap-4 md:gap-8 lg:gap-16 justify-center md:justify-start">
     {
       navLinks.map(({ href, text }) => {
         const isActive =
