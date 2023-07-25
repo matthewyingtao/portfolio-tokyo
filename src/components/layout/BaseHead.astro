@@ -50,8 +50,8 @@ const { title, description, image, publishedTime, modifiedTime } = Astro.props;
       modifiedTime,
     },
     image: {
-      width: "1200",
-      height: "630",
+      width: image ? null : "1200",
+      height: image ? null : "630",
       alt: title || "Matthew Tao",
     },
   }}
