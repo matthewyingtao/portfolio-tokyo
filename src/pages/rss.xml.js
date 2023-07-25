@@ -7,5 +7,4 @@ export const get = () =>
       "Matthew Tao is an Auckland based front-end developer who focuses on the little things that make a website delightful.",
     site: import.meta.env.SITE,
     items: import.meta.glob("./blog/**/*.{md,mdx}"),
-    trailingSlash: false,
   });
