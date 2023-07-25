@@ -39,7 +39,7 @@ const { title, description, image, publishedTime, modifiedTime } = Astro.props;
   charset="utf-8"
   openGraph={{
     basic: {
-      title: title ? "Matthew Tao" : `${title} · Matthew Tao`,
+      title: title ? `${title} · Matthew Tao` : "Matthew Tao",
       type: "website",
       image: image || ogImage,
       url: canonicalURL,
