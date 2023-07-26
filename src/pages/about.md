@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/BlogPost.astro
 title: About Me
-description: "4"
+description: "Aspiring web developer. Find out a little more about me and what I do."
 pubDate: 2022-02-18T11:00:00.000Z
 lastEdit: 2022-02-18T11:00:00.000Z
 heroImage: /uploads/environ.webp

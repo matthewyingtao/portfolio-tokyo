@@ -10,13 +10,14 @@ import ExpandedContact from "../../components/layout/ExpandedContact.astro";
 import Header from "../../components/layout/Header.astro";
 
 let postsGlob = (await Astro.glob("./post/*.md")).map(async (p) => {
-  const post1 = await readFile(p.file);
+  const post = await readFile(p.file);
 
-  const { content } = matter(post1);
+  const { content } = matter(post);
 
   return {
     ...p,
     length: countWords(content),
+    // file name becomes the slug
     slug: slugify(basename(p.file, ".md")),
   };
 });
