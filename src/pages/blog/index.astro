@@ -8,7 +8,6 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import BaseHead from "../../components/layout/BaseHead.astro";
 import ExpandedContact from "../../components/layout/ExpandedContact.astro";
 import Header from "../../components/layout/Header.astro";
-import Scribbles from "../../components/layout/Scribbles.astro";
 
 let postsGlob = (await Astro.glob("./post/*.md")).map(async (p) => {
   const post1 = await readFile(p.file);
@@ -41,7 +40,7 @@ resolvedPosts = resolvedPosts.sort(
   </head>
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>
-    <Scribbles />
+
     <Header />
     <main
       class="flex gap-12 xl:gap-24 flex-wrap md:flex-nowrap justify-center md:justify-start mb-20"

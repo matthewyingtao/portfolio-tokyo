@@ -4,7 +4,6 @@ import FormattedDate from "../components/FormattedDate.astro";
 import BaseHead from "../components/layout/BaseHead.astro";
 import ExpandedContact from "../components/layout/ExpandedContact.astro";
 import Header from "../components/layout/Header.astro";
-import Scribbles from "../components/layout/Scribbles.astro";
 
 import type { MarkdownLayoutProps } from "astro";
 
@@ -36,7 +35,7 @@ const length = countWords(Astro.props.rawContent());
   </head>
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>
-    <Scribbles />
+
     <Header title={title} />
     <main
       class="flex gap-12 xl:gap-24 flex-nowrap flex-col md:flex-row justify-center items-center md:items-start md:justify-start mb-20"
