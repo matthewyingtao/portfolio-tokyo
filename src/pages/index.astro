@@ -16,33 +16,37 @@ import Header from "../components/layout/Header.astro";
     <main
       class="flex gap-12 xl:gap-24 flex-wrap md:flex-nowrap justify-center md:justify-start mb-20"
     >
-      <aside class="whitespace-nowrap relative hidden lg:block">
+      <aside
+        class="whitespace-nowrap relative hidden lg:block green-fade px-4 py-6 rounded-xl text-b-minato"
+      >
         <img
           src="/dots.svg"
           alt=""
           class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12"
         />
-        <p>Auckland-Based</p>
-        <p class="mb-[4.5rem]">Front-End Developer</p>
+        <p>Second-year</p>
+        <p class="mb-[4.5rem]">Computer science</p>
 
-        <h1 class="text-4xl text-b-minato mb-[4.5rem] leading-none">
+        <h1 class="text-4xl text-b-willow-dark mb-[4.5rem] leading-none">
           <span class="block font-medium mb-2">陶映渠</span>
           <span class="block">Tao Ying Qu</span>
         </h1>
 
-        <span class="block text-b-willow mb-4">Designer</span>
-        {
-          Array.from({ length: 8 }).map((_, i) => (
-            <span
-              class="block text-b-willow leading-[0]"
-              style={{
-                marginTop: 4 * 1.5 ** i + "px",
-              }}
-            >
-              Developer
-            </span>
-          ))
-        }
+        <div class="-translate-y-3">
+          <span class="block mb-4">Designer</span>
+          {
+            Array.from({ length: 8 }).map((_, i) => (
+              <span
+                class="block leading-[0]"
+                style={{
+                  marginTop: 4 * 1.5 ** i + "px",
+                }}
+              >
+                Developer
+              </span>
+            ))
+          }
+        </div>
       </aside>
       <section class="w-[32ch] text-b-gray">
         <p class="mb-16">
