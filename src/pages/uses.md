@@ -22,9 +22,10 @@ Inspired by [Wes Bos](https://wesbos.com/)' [uses.tech](https://uses.tech/), her
 
 ### List of useful VS Code extensions
 
-* [File Nesting Updater](https://marketplace.visualstudio.com/items?itemName=antfu.file-nesting "File Nesting Updater for vs code (external link)")
-* [HTML Bisbuits](https://marketplace.visualstudio.com/items?itemName=CodeBiscuits.html-biscuits)
-* [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
+* [File Nesting Updater](https://marketplace.visualstudio.com/items?itemName=antfu.file-nesting "File Nesting Updater for vs code (external link)") - Automatically updates the file-nesting for a bunch of related files. Incredibly useful for front-end projects, particularly since they always have a bunch of config files. (ts, prettier, lock files, etc.)
+* [HTML Bisbuits](https://marketplace.visualstudio.com/items?itemName=CodeBiscuits.html-biscuits) - Adds a class list to the end of HTML elements, helps identify which closing-tag you're looking at.
+* [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors) - Does what it says on the box.
+* [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode) - Tightens the feedback loop for JS and TS script development IMMENSELY. Cannot recommend enough if you're picking up programming for the first time, and trying to learn JS.
 
 ## Hardware
 
