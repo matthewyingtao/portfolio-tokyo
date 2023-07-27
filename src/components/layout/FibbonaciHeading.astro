@@ -1,0 +1,36 @@
+---
+export type props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<aside class="whitespace-nowrap mt-2 hidden lg:block sticky top-8 h-fit">
+  <img
+    src="/dotssmall.svg"
+    alt=""
+    class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12"
+  />
+  {
+    Array.from({ length: 8 }).map((_, i) => {
+      const offset = 4 * 1.5 ** i;
+
+      // translate-y-1 is to line-up with line-height: 0
+      return (
+        <span
+          class:list={[
+            "block leading-[0] translate-y-1 relative",
+            i !== 0 && "text-b-willow",
+          ]}
+          style={{
+            marginTop: offset + "px",
+            zIndex: -i,
+          }}
+        >
+          {title}
+        </span>
+      );
+    })
+  }
+</aside>
