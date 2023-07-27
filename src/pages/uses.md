@@ -23,7 +23,8 @@ Inspired by [Wes Bos](https://wesbos.com/)' [uses.tech](https://uses.tech/), her
 ### List of useful VS Code extensions
 
 * [File Nesting Updater](https://marketplace.visualstudio.com/items?itemName=antfu.file-nesting "File Nesting Updater for vs code (external link)")
-*
+* [HTML Bisbuits](https://marketplace.visualstudio.com/items?itemName=CodeBiscuits.html-biscuits)
+* [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
 
 ## Hardware
 
