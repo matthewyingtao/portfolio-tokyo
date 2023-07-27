@@ -20,6 +20,11 @@ Inspired by [Wes Bos](https://wesbos.com/)' [uses.tech](https://uses.tech/), her
 * I use **Figma** to prototype and iterate my website and app designs, as well as to create simple SVG files (I use **Adobe Illustrator** for anything more complex).
 * **[Squoosh](https://squoosh.app/)** is an amazing web app I often use to compress images.
 
+### List of useful VS Code extensions
+
+* [File Nesting Updater](https://marketplace.visualstudio.com/items?itemName=antfu.file-nesting "File Nesting Updater for vs code (external link)")
+*
+
 ## Hardware
 
 * Laptop — ASUS Vivobook Pro 15 OLED M3500QC
