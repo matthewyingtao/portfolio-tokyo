@@ -4,7 +4,7 @@ title: About Me
 description: Aspiring web developer. Find out a little more about me and what I do.
 pubDate: 2022-02-18T11:00:00.000Z
 lastEdit: 2022-02-18T11:00:00.000Z
-heroImage: /uploads/environ.webp
+heroImage: /uploads/scratch.png
 ---
 
 ## Who I am
