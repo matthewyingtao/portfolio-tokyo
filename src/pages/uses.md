@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/BlogPost.astro
 title: /Uses
-description: 'Inspired by Wes Bos'' uses page, the tech I use on a daily basis.'
+description: 'Inspired by Wes Bos'' "/uses" page, the tech Matthew Tao uses on a daily basis.'
 pubDate: 2023-07-26T12:00:00.000Z
 lastEdit: 2023-07-26T12:00:00.000Z
 heroImage: /uploads/00000000yzx0NX4cmxYgAk.png
@@ -13,7 +13,7 @@ Inspired by [Wes Bos](https://wesbos.com/)' [uses.tech](https://uses.tech/), her
 
 ## Software and Tools
 
-* I use **Visual Studio Code** as my code editor of choice with the [Tokyo Night Storm](https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night) theme and the [Fluent Icons](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons) extension. The font I use is Roboto Mono. Here's what that looks like:
+* I use **Visual Studio Code** as my code editor of choice with the [Rose Pine Moon](https://marketplace.visualstudio.com/items?itemName=mvllow.rose-pine "rose pine moon for vscode (external link)") theme and the [Fluent Icons](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.fluent-icons) extension. The font I use is Roboto Mono. Here's what that looks like:
 
 ![My Visual Studio Code appearance.](/uploads/00000000yzx0NX4cmxYgAk.png)
 
