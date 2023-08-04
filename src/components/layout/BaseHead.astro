@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import { ViewTransitions } from "astro:transitions";
 import GlobalCSS from "./globalCSS.astro";
 
 export interface Props {
@@ -61,4 +62,5 @@ const { title, description, image, publishedTime, modifiedTime } = Astro.props;
     creator: "@MatthewTao5",
   }}
 />
+<ViewTransitions />
 <GlobalCSS />

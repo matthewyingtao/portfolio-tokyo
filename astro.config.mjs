@@ -9,6 +9,9 @@ import themeRosePineDawn from "/src/rose-pine-dawn-color-theme.json";
 export default defineConfig({
   site: "https://www.matthewtao.com",
   compressHTML: true,
+  experimental: {
+    viewTransitions: true,
+  },
   integrations: [
     mdx({
       syntaxHighlight: "shiki",

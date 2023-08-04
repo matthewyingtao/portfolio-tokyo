@@ -26,16 +26,26 @@ const { pathname } = Astro.url;
     class="pt-12 pb-24 flex gap-4 md:gap-8 lg:gap-16 justify-center md:justify-start"
   >
     {
-      navLinks.map(({ href, text }) => {
-        const isActive =
-          href === pathname || href === pathname.replace(/\/$/, "");
+      navLinks.map(({ href, text }, i) => {
+        let isActive;
+
+        // e.g /blog matches /blog/ and /blog/astro but not /about
+        isActive = pathname.startsWith(href) && pathname.length >= href.length;
+
+        if (href === "/") {
+          isActive = pathname == href;
+        }
 
         return (
           <a href={href} class="relative isolate">
-            {isActive && (
-              <div class="absolute green-fade h-11 w-11 rounded-full -left-4 -top-[0.875rem] -z-10" />
-            )}
-            {text}
+            <div
+              class:list={[
+                "absolute green-fade h-11 w-11 rounded-full -left-4 -top-[0.875rem] -z-10",
+                isActive ? "opacity-100" : "opacity-0 translate-y-4",
+              ]}
+              transition:name={"dot" + i}
+            />
+            <span transition:name={"text" + i}>{text}</span>
           </a>
         );
       })
