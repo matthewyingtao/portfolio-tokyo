@@ -143,6 +143,10 @@
   }
 
   .content-md > :first-child {
+    @apply -mt-2;
+  }
+
+  .content-md > :first-child:is(h1, h2, h3, h4, h5, h6) {
     @apply leading-[0.95] mt-0;
   }
 
@@ -167,7 +171,7 @@
   }
 
   .content-md p {
-    @apply mb-[0.75ex] mt-[0.8ex];
+    @apply mb-[1ex] mt-[1.125ex];
   }
 
   .content-md pre {
