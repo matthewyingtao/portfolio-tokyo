@@ -22,6 +22,6 @@ My gripe is that compared to the [2023 estimate of 4.9 billion](https://www.forb
 
 The point is, this could've been avoided by making a damn website, and I guarantee you that whatever was being said in the tweets could have been enhanced with links, captioned and carefully positioned images, a sidebar to navigate, etc. The web is capable of SO MUCH MORE than simply displaying content in such a rigid format, and my passion is to explore what's possible.
 
-If you're like me and are driven to create great work — whatever form that takes — I beg you to consider tailoring a website to enhance the whole package of what you're sharing with the world. Your art \*\*deserves \*\*to be packaged nicely! Presented as such, not simply as "content". Akin to an album cover.
+If you're like me and are driven to create great work — whatever form that takes — I beg you to consider tailoring a website to enhance the whole package of what you're sharing with the world. Your art **deserves** to be packaged nicely! Presented as such, not simply as "content". Akin to an album cover.
 
 If you want to make a digital interaction touching on every angle to create a cohesive experience, your only choice is to make a website. Because the web can do so much more than social media.
