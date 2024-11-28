@@ -8,7 +8,7 @@
     },
     {
       "title": "Environ",
-      "description": "An app that utilises AI to encourage recycling.",
+      "description": "An app that utilises AI to encourage recycling. I built this app for my scholarship digital technologies project in year 13, it's made with Flutter and uses an AI model that I trained off data from Kaggle.",
       "date": "2023-06-29T12:00:00.000Z",
       "image": "/uploads/environ.webp"
     },
