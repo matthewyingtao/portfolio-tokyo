@@ -20,7 +20,7 @@
     },
     {
       "title": "Gif Creator",
-      "description": "A simple web app that allows you to create meme gifs from images or videos.",
+      "description": "A simple web app that allows you to create meme gifs from images or videos. Built with Flask and ffmpeg-python.",
       "date": "2023-06-29T12:00:00.000Z",
       "image": "/uploads/gif.webp"
     }
