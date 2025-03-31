@@ -38,13 +38,13 @@ const length = countWords(Astro.props.rawContent());
 
     <Header title={title} />
     <main
-      class="flex gap-12 xl:gap-24 flex-nowrap flex-col md:flex-row justify-center items-center md:items-start md:justify-start mb-20"
+      class="mb-20 flex flex-col flex-nowrap items-center justify-center gap-12 md:flex-row md:items-start md:justify-start xl:gap-24"
     >
-      <aside class="hidden lg:block max-w-[18ch] sticky top-8 h-fit">
+      <aside class="sticky top-8 hidden h-fit max-w-[18ch] lg:block">
         <img
           src="/dotssmall.svg"
           alt=""
-          class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12"
+          class="absolute -bottom-2 left-0 top-0 -z-10 -translate-x-12"
         />
         <h1 class="mb-[4.5rem]">{title}</h1>
 
@@ -59,7 +59,7 @@ const length = countWords(Astro.props.rawContent());
         </div>
       </aside>
       <section
-        class="w-full max-w-[55ch] text-b-gray content-md mt-2 flex-grow md:w-0"
+        class="content-md mt-2 w-full max-w-[55ch] flex-grow text-b-gray md:w-0"
       >
         <slot />
       </section>

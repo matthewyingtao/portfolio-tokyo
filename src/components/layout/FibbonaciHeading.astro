@@ -6,11 +6,11 @@ export type props = {
 const { title } = Astro.props;
 ---
 
-<aside class="whitespace-nowrap mt-2 hidden lg:block sticky top-8 h-fit">
+<aside class="sticky top-8 mt-2 hidden h-fit whitespace-nowrap lg:block">
   <img
     src="/dotssmall.svg"
     alt=""
-    class="absolute -z-10 left-0 top-0 -bottom-2 -translate-x-12"
+    class="absolute -bottom-2 left-0 top-0 -z-10 -translate-x-12"
   />
   {
     Array.from({ length: 8 }).map((_, i) => {
@@ -20,7 +20,7 @@ const { title } = Astro.props;
       return (
         <span
           class:list={[
-            "block leading-[0] translate-y-1 relative",
+            "relative block translate-y-1 leading-[0]",
             i !== 0 && "text-b-willow",
           ]}
           style={{

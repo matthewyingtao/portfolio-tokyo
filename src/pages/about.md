@@ -13,7 +13,7 @@ Hello! I'm Matthew Tao, an aspiring front-end developer currently studying Compu
 
 My first encounter with code was at the age of thirteen when I signed up for a coding club at my school. We were taught the fundamentals of programming with a programming language called Scratch.
 
-I liked the idea of creating something completely original and being able to translate an idea into something more concrete, and I started to code in my free time as a hobby. This is when I wrote (more like drag and drop) the ***worst*** code in my life.
+I liked the idea of creating something completely original and being able to translate an idea into something more concrete, and I started to code in my free time as a hobby. This is when I wrote (more like drag and drop) the **_worst_** code in my life.
 
 ![If only I knew what a function was...](/uploads/scratch.png)
 
@@ -25,10 +25,10 @@ I think my love for web development has been a natural follow-on from these two 
 
 ### Languages
 
-* Python
-* Javascript (Typescript is sooo much nicer! 💖)
-* Dart
-* Java
+- Python
+- Javascript (Typescript is sooo much nicer! 💖)
+- Dart
+- Java
 
 Next on my list is to learn a functional-focused language such as F# to pick up some of the paradigms and expand the number of tools I have for any given problem.
 

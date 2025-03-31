@@ -23,7 +23,7 @@ const { pathname } = Astro.url;
 
 <header>
   <nav
-    class="pt-12 pb-24 flex gap-4 md:gap-8 lg:gap-16 justify-center md:justify-start"
+    class="flex justify-center gap-4 pb-24 pt-12 md:justify-start md:gap-8 lg:gap-16"
   >
     {
       navLinks.map(({ href, text }, i) => {
@@ -40,8 +40,8 @@ const { pathname } = Astro.url;
           <a href={href} class="relative isolate">
             <div
               class:list={[
-                "absolute green-fade h-11 w-11 rounded-full -left-4 -top-[0.875rem] -z-10",
-                isActive ? "opacity-100" : "opacity-0 translate-y-4",
+                "green-fade absolute -left-4 -top-[0.875rem] -z-10 h-11 w-11 rounded-full",
+                isActive ? "opacity-100" : "translate-y-4 opacity-0",
               ]}
               transition:name={"dot" + i}
             />

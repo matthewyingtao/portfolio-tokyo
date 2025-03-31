@@ -21,10 +21,10 @@ import { projects } from "../data/projects/projects.json";
 
     <Header />
     <main
-      class="flex gap-12 xl:gap-24 flex-wrap md:flex-nowrap justify-center md:justify-start mb-20"
+      class="mb-20 flex flex-wrap justify-center gap-12 md:flex-nowrap md:justify-start xl:gap-24"
     >
       <FibbonaciHeading title="Projects" />
-      <section class="w-[42ch] mt-2">
+      <section class="mt-2 w-[42ch]">
         <ul class="flex flex-col gap-12">
           {
             projects.map(({ title, image, date, description }) => (

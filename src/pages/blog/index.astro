@@ -45,12 +45,12 @@ resolvedPosts = resolvedPosts.sort(
 
     <Header />
     <main
-      class="flex gap-12 xl:gap-24 flex-wrap md:flex-nowrap justify-center md:justify-start mb-20"
+      class="mb-20 flex flex-wrap justify-center gap-12 md:flex-nowrap md:justify-start xl:gap-24"
     >
       <FibbonaciHeading title="Latest blog posts" />
-      <section class="w-[42ch] text-b-gray mt-2">
+      <section class="mt-2 w-[42ch] text-b-gray">
         <h1
-          class="text-b-willow-dark mb-8 lg:sr-only underline underline-offset-2"
+          class="mb-8 text-b-willow-dark underline underline-offset-2 lg:sr-only"
         >
           Latest blog posts
         </h1>
@@ -59,14 +59,14 @@ resolvedPosts = resolvedPosts.sort(
             resolvedPosts.map((post) => (
               <li class="flex flex-col">
                 <a
-                  class="text-b-willow-dark mb-1"
+                  class="mb-1 text-b-willow-dark"
                   href={`/blog/post/${post.slug}`}
                 >
                   {post.frontmatter.title}
                 </a>
                 <p class="mb-4">{post.frontmatter.description}</p>
 
-                <div class="flex justify-between items-center text-base text-b-minato">
+                <div class="flex items-center justify-between text-base text-b-minato">
                   <span>
                     <FormattedDate dateString={post.frontmatter.pubDate} /> ·{" "}
                     {post.length} words · {Math.ceil(post.length / 200)} min

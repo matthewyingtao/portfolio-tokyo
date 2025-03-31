@@ -1,230 +1,229 @@
 <!--  we put global CSS here because @apply does not get parsed in .css files -->
 <style is:global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-	body {
-		font-family: "PP Mori", sans-serif;
-		line-height: calc(1.2em + 1ex);
-		background-image: url("/scribbleTop.svg"), url("/scribbleBottom.svg");
-		background-repeat: no-repeat;
-		background-position:
-			0% 0%,
-			50% 10rem;
-		@apply bg-b-white
-      text-b-willow-dark text-lg;
-	}
+  body {
+    font-family: "PP Mori", sans-serif;
+    line-height: calc(1.2em + 1ex);
+    background-image: url("/scribbleTop.svg"), url("/scribbleBottom.svg");
+    background-repeat: no-repeat;
+    background-position:
+      0% 0%,
+      50% 10rem;
+    @apply bg-b-white text-lg text-b-willow-dark;
+  }
 
-	:root {
-		--gutter: 2rem;
-	}
+  :root {
+    --gutter: 2rem;
+  }
 
-	@media screen and (min-width: 1024px) {
-		:root {
-			--gutter: 4rem;
-		}
-	}
+  @media screen and (min-width: 1024px) {
+    :root {
+      --gutter: 4rem;
+    }
+  }
 
-	@media screen and (min-width: 1280px) {
-		:root {
-			--gutter: 6rem;
-		}
-	}
+  @media screen and (min-width: 1280px) {
+    :root {
+      --gutter: 6rem;
+    }
+  }
 
-	@media screen and (min-width: 1536px) {
-		:root {
-			--gutter: 12rem;
-		}
-	}
+  @media screen and (min-width: 1536px) {
+    :root {
+      --gutter: 12rem;
+    }
+  }
 
-	@font-face {
-		font-family: "PP Mori";
-		src:
-			url("/fonts/PPMori-ExtraBold.woff2") format("woff2"),
-			url("/fonts/PPMori-ExtraBold.woff") format("woff");
-		font-weight: bold;
-		font-style: normal;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori";
+    src:
+      url("/fonts/PPMori-ExtraBold.woff2") format("woff2"),
+      url("/fonts/PPMori-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori";
-		src:
-			url("/fonts/PPMori-ExtraBoldItalic.woff2") format("woff2"),
-			url("/fonts/PPMori-ExtraBoldItalic.woff") format("woff");
-		font-weight: bold;
-		font-style: italic;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori";
+    src:
+      url("/fonts/PPMori-ExtraBoldItalic.woff2") format("woff2"),
+      url("/fonts/PPMori-ExtraBoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori";
-		src:
-			url("/fonts/PPMori-SemiBoldItalic.woff2") format("woff2"),
-			url("/fonts/PPMori-SemiBoldItalic.woff") format("woff");
-		font-weight: 600;
-		font-style: italic;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori";
+    src:
+      url("/fonts/PPMori-SemiBoldItalic.woff2") format("woff2"),
+      url("/fonts/PPMori-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori";
-		src:
-			url("/fonts/PPMori-Regular.woff2") format("woff2"),
-			url("/fonts/PPMori-Regular.woff") format("woff");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori";
+    src:
+      url("/fonts/PPMori-Regular.woff2") format("woff2"),
+      url("/fonts/PPMori-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori";
-		src:
-			url("/fonts/PPMori-Extralight.woff2") format("woff2"),
-			url("/fonts/PPMori-Extralight.woff") format("woff");
-		font-weight: 100;
-		font-style: normal;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori";
+    src:
+      url("/fonts/PPMori-Extralight.woff2") format("woff2"),
+      url("/fonts/PPMori-Extralight.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori";
-		src:
-			url("/fonts/PPMori-RegularItalic.woff2") format("woff2"),
-			url("/fonts/PPMori-RegularItalic.woff") format("woff");
-		font-weight: normal;
-		font-style: italic;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori";
+    src:
+      url("/fonts/PPMori-RegularItalic.woff2") format("woff2"),
+      url("/fonts/PPMori-RegularItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori";
-		src:
-			url("/fonts/PPMori-SemiBold.woff2") format("woff2"),
-			url("/fonts/PPMori-SemiBold.woff") format("woff");
-		font-weight: 600;
-		font-style: normal;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori";
+    src:
+      url("/fonts/PPMori-SemiBold.woff2") format("woff2"),
+      url("/fonts/PPMori-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori Book";
-		src:
-			url("/fonts/PPMori-BookItalic.woff2") format("woff2"),
-			url("/fonts/PPMori-BookItalic.woff") format("woff");
-		font-weight: 300;
-		font-style: italic;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori Book";
+    src:
+      url("/fonts/PPMori-BookItalic.woff2") format("woff2"),
+      url("/fonts/PPMori-BookItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori";
-		src:
-			url("/fonts/PPMori-ExtralightItalic.woff2") format("woff2"),
-			url("/fonts/PPMori-ExtralightItalic.woff") format("woff");
-		font-weight: 100;
-		font-style: italic;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori";
+    src:
+      url("/fonts/PPMori-ExtralightItalic.woff2") format("woff2"),
+      url("/fonts/PPMori-ExtralightItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+  }
 
-	@font-face {
-		font-family: "PP Mori Book";
-		src:
-			url("/fonts/PPMori-Book.woff2") format("woff2"),
-			url("/fonts/PPMori-Book.woff") format("woff");
-		font-weight: 300;
-		font-style: normal;
-		font-display: swap;
-	}
+  @font-face {
+    font-family: "PP Mori Book";
+    src:
+      url("/fonts/PPMori-Book.woff2") format("woff2"),
+      url("/fonts/PPMori-Book.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
 
-	.content-md {
-		@apply text-b-willow-dark;
-	}
+  .content-md {
+    @apply text-b-willow-dark;
+  }
 
-	.content-md > :first-child {
-		@apply -mt-2;
-	}
+  .content-md > :first-child {
+    @apply -mt-2;
+  }
 
-	.content-md > :first-child:is(h1, h2, h3, h4, h5, h6) {
-		@apply leading-[0.95] mt-0;
-	}
+  .content-md > :first-child:is(h1, h2, h3, h4, h5, h6) {
+    @apply mt-0 leading-[0.95];
+  }
 
-	.content-md h1 {
-		@apply text-3xl mb-[0.75ex] mt-[1.25em] text-b-gray;
-	}
+  .content-md h1 {
+    @apply mb-[0.75ex] mt-[1.25em] text-3xl text-b-gray;
+  }
 
-	.content-md h2 {
-		@apply text-2xl mb-[0.75ex] mt-[1.25em] text-b-gray;
-	}
+  .content-md h2 {
+    @apply mb-[0.75ex] mt-[1.25em] text-2xl text-b-gray;
+  }
 
-	.content-md h3 {
-		@apply text-xl mb-[0.75ex] mt-[1.25em] text-b-gray;
-	}
+  .content-md h3 {
+    @apply mb-[0.75ex] mt-[1.25em] text-xl text-b-gray;
+  }
 
-	.content-md h4 {
-		@apply text-lg mb-[0.75ex] mt-[1.25em] text-b-gray;
-	}
+  .content-md h4 {
+    @apply mb-[0.75ex] mt-[1.25em] text-lg text-b-gray;
+  }
 
-	.content-md h5 {
-		@apply text-base mb-[0.75ex] mt-[1.25em] text-b-gray;
-	}
+  .content-md h5 {
+    @apply mb-[0.75ex] mt-[1.25em] text-base text-b-gray;
+  }
 
-	.content-md p {
-		@apply mb-[1ex] mt-[1.125ex];
-	}
+  .content-md p {
+    @apply mb-[1ex] mt-[1.125ex];
+  }
 
-	.content-md a {
-		@apply underline underline-offset-1 decoration-wavy decoration-b-minato text-b-minato;
-	}
+  .content-md a {
+    @apply text-b-minato underline decoration-b-minato decoration-wavy underline-offset-1;
+  }
 
-	.content-md pre {
-		@apply p-4 border-b-willow border rounded-sm mb-6 text-base;
-	}
+  .content-md pre {
+    @apply mb-6 rounded-sm border border-b-willow p-4 text-base;
+  }
 
-	.content-md img {
-		@apply mb-6;
-	}
+  .content-md img {
+    @apply mb-6;
+  }
 
-	.content-md ul {
-		@apply list-disc list-inside;
-	}
+  .content-md ul {
+    @apply list-inside list-disc;
+  }
 
-	.content-md ol {
-		@apply list-decimal list-inside;
-	}
+  .content-md ol {
+    @apply list-inside list-decimal;
+  }
 
-	.noise {
-		position: fixed;
-		inset: 0;
-		z-index: 500;
-		mix-blend-mode: overlay;
-		background-image: url(/noise.webp);
-		pointer-events: none;
-	}
+  .noise {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    mix-blend-mode: overlay;
+    background-image: url(/noise.webp);
+    pointer-events: none;
+  }
 
-	.green-fade {
-		background: linear-gradient(180deg, #c8d5bb 0%, #e0f3cd 100%);
-	}
+  .green-fade {
+    background: linear-gradient(180deg, #c8d5bb 0%, #e0f3cd 100%);
+  }
 
-	.__designer-cascade.first {
-		opacity: 1 !important;
-	}
+  .__designer-cascade.first {
+    opacity: 1 !important;
+  }
 
-	.__designer-cascade {
-		--i-th: 0;
-		--cascade-size: calc(4 * pow(1.5, var(--i-th)));
-		--cumulative-cascase-px: calc(8 * (pow(1.5, var(--i-th) + 1) - 1) * 1px);
-		margin-top: calc(var(--cascade-size) * 1px);
-		translate: 0 calc(-1 * var(--cumulative-cascase-px));
-		opacity: 0;
-		transition:
-			translate 0.5s calc(var(--cascade-size) * 5ms),
-			opacity 0.5s calc(var(--cascade-size) * 5ms);
-	}
+  .__designer-cascade {
+    --i-th: 0;
+    --cascade-size: calc(4 * pow(1.5, var(--i-th)));
+    --cumulative-cascase-px: calc(8 * (pow(1.5, var(--i-th) + 1) - 1) * 1px);
+    margin-top: calc(var(--cascade-size) * 1px);
+    translate: 0 calc(-1 * var(--cumulative-cascase-px));
+    opacity: 0;
+    transition:
+      translate 0.5s calc(var(--cascade-size) * 5ms),
+      opacity 0.5s calc(var(--cascade-size) * 5ms);
+  }
 
-	.left-sidebar:hover .__designer-cascade {
-		translate: 0 0;
-		opacity: calc(var(--i-th) * 0.1);
-	}
+  .left-sidebar:hover .__designer-cascade {
+    translate: 0 0;
+    opacity: calc(var(--i-th) * 0.1);
+  }
 </style>

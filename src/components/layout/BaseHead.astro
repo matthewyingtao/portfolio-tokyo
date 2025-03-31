@@ -4,15 +4,15 @@ import { ViewTransitions } from "astro:transitions";
 import GlobalCSS from "./globalCSS.astro";
 
 export interface Props {
-	title?: string;
-	description?: string;
-	image?: string;
-	publishedTime?: string;
-	modifiedTime?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
 const defaultDescription =
-	"Matthew Tao is an Auckland based front-end developer who focuses on the little things that make a website delightful.";
+  "Matthew Tao is an Auckland based front-end developer who focuses on the little things that make a website delightful.";
 const ogImage = "/social.jpg";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -24,45 +24,45 @@ const { title, description, image, publishedTime, modifiedTime } = Astro.props;
 <link rel="icon" type="image/svg+xml" href="/favicon.png" />
 <meta name="generator" content={Astro.generator} />
 <link
-	rel="preload"
-	as="font"
-	href="/fonts/PPMori-Regular.woff2"
-	type="font/woff2"
-	crossorigin="anonymous"
+  rel="preload"
+  as="font"
+  href="/fonts/PPMori-Regular.woff2"
+  type="font/woff2"
+  crossorigin="anonymous"
 />
 
 <SEO
-	title={title}
-	titleTemplate="%s · Matthew Tao"
-	titleDefault="Matthew Tao"
-	description={description || defaultDescription}
-	canonical={canonicalURL}
-	charset="utf-8"
-	openGraph={{
-		basic: {
-			title: title ? `${title} · Matthew Tao` : "Matthew Tao",
-			type: "website",
-			image: image || ogImage,
-			url: canonicalURL,
-		},
-		optional: {
-			description: description || defaultDescription,
-		},
-		article: {
-			publishedTime,
-			modifiedTime,
-		},
-		image: {
-			width: image ? undefined : 1200,
-			height: image ? undefined : 630,
-			alt: title || "Matthew Tao",
-		},
-	}}
-	twitter={{
-		card: "summary_large_image",
-		site: "@MatthewTao5",
-		creator: "@MatthewTao5",
-	}}
+  title={title}
+  titleTemplate="%s · Matthew Tao"
+  titleDefault="Matthew Tao"
+  description={description || defaultDescription}
+  canonical={canonicalURL}
+  charset="utf-8"
+  openGraph={{
+    basic: {
+      title: title ? `${title} · Matthew Tao` : "Matthew Tao",
+      type: "website",
+      image: image || ogImage,
+      url: canonicalURL,
+    },
+    optional: {
+      description: description || defaultDescription,
+    },
+    article: {
+      publishedTime,
+      modifiedTime,
+    },
+    image: {
+      width: image ? undefined : 1200,
+      height: image ? undefined : 630,
+      alt: title || "Matthew Tao",
+    },
+  }}
+  twitter={{
+    card: "summary_large_image",
+    site: "@MatthewTao5",
+    creator: "@MatthewTao5",
+  }}
 />
 <ViewTransitions />
 <GlobalCSS />
