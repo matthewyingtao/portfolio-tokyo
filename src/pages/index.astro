@@ -55,42 +55,66 @@ import Header from "../components/layout/Header.astro";
 					understand the underlying concepts behind them.
 				</p>
 				<ul class="flex flex-col gap-5">
-					<li
-						class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0"
-					>
-						<a href="/blog">
-							Read my
-							<span class="text-b-willow-dark">blog</span> posts
-						</a>
-						<img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
-					</li>
-					<li
-						class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0"
-					>
-						<a href="/projects">
-							View my
-							<span class="text-b-willow-dark">projects</span>
-						</a>
-						<img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
-					</li>
-					<li
-						class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0"
-					>
-						<a href="/about">
-							Find out more
-							<span class="text-b-willow-dark">about me!</span>
-						</a>
-						<img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
-					</li>
-					<li
-						class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0"
-					>
-						<a href="/uses">
-							Check out my
-							<span class="text-b-willow-dark">setup</span>
-						</a>
-						<img src="/icons/externalArrow.svg" alt="" class="h-5 w-5" />
-					</li>
+					<a href="/blog">
+						<li
+							class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0 group"
+						>
+							<span>
+								Read my
+								<span class="text-b-willow-dark">blog</span> posts
+							</span>
+							<img
+								src="/icons/externalArrow.svg"
+								alt=""
+								class="h-5 w-5 group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform ease-in-out"
+							/>
+						</li>
+					</a>
+					<a href="/projects">
+						<li
+							class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0 group"
+						>
+							<span>
+								View my
+								<span class="text-b-willow-dark">projects</span>
+							</span>
+							<img
+								src="/icons/externalArrow.svg"
+								alt=""
+								class="h-5 w-5 group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform ease-in-out"
+							/>
+						</li>
+					</a>
+					<a href="/about">
+						<li
+							class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0 group"
+						>
+							<span>
+								Find out more
+								<span class="text-b-willow-dark">about me!</span>
+							</span>
+							<img
+								src="/icons/externalArrow.svg"
+								alt=""
+								class="h-5 w-5 group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform ease-in-out"
+							/>
+						</li>
+					</a>
+					<a href="/uses">
+						<li
+							class="flex items-center justify-between gap-2 pb-3 relative after:absolute after:h-[1px] after:bg-b-willow after:w-[calc(100%+3rem)] after:left-0 after:-translate-x-6 after:bottom-0 group"
+						>
+							<span>
+								Check out my
+								<span class="text-b-willow-dark">setup</span>
+							</span>
+							<img
+								src="/icons/externalArrow.svg"
+								alt=""
+								class="h-5 w-5 group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform ease-in-out"
+							/>
+						</li>
+					</a>
 				</ul>
 			</section>
 			<ExpandedContact />
