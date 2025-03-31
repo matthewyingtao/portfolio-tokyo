@@ -17,17 +17,17 @@ import Header from "../components/layout/Header.astro";
       class="mb-20 flex flex-wrap justify-center gap-12 md:flex-nowrap md:justify-start xl:gap-24"
     >
       <aside
-        class="green-fade left-sidebar relative hidden whitespace-nowrap rounded-xl px-4 py-6 text-b-minato lg:block"
+        class="green-fade left-sidebar text-b-minato relative hidden rounded-xl px-4 py-6 whitespace-nowrap lg:block"
       >
         <img
           src="/dots.svg"
           alt=""
-          class="absolute -bottom-2 left-0 top-0 -z-10 -translate-x-12"
+          class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12"
         />
         <p>Second-year</p>
         <p class="mb-[4.5rem]">Computer science</p>
 
-        <h1 class="mb-[4.5rem] text-4xl leading-none text-b-willow-dark">
+        <h1 class="text-b-willow-dark mb-[4.5rem] text-4xl leading-none">
           <span class="mb-2 block font-medium">陶映渠</span>
           <span class="block">Tao Ying Qu</span>
         </h1>
@@ -48,7 +48,7 @@ import Header from "../components/layout/Header.astro";
           }
         </div>
       </aside>
-      <section class="w-[32ch] text-b-gray">
+      <section class="text-b-gray w-[32ch]">
         <p class="mb-16">
           <span class="text-b-willow-dark">Matthew Tao</span> is a front-end developer
           who enjoys exploring new technologies and tries to understand the underlying
@@ -57,7 +57,7 @@ import Header from "../components/layout/Header.astro";
         <ul class="flex flex-col gap-5">
           <a href="/blog">
             <li
-              class="group relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6 after:bg-b-willow"
+              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
                 Read my
@@ -66,13 +66,13 @@ import Header from "../components/layout/Header.astro";
               <img
                 src="/icons/externalArrow.svg"
                 alt=""
-                class="h-5 w-5 transition-transform ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]"
+                class="h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
               />
             </li>
           </a>
           <a href="/projects">
             <li
-              class="group relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6 after:bg-b-willow"
+              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
                 View my
@@ -81,13 +81,13 @@ import Header from "../components/layout/Header.astro";
               <img
                 src="/icons/externalArrow.svg"
                 alt=""
-                class="h-5 w-5 transition-transform ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]"
+                class="h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
               />
             </li>
           </a>
           <a href="/about">
             <li
-              class="group relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6 after:bg-b-willow"
+              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
                 Find out more
@@ -96,13 +96,13 @@ import Header from "../components/layout/Header.astro";
               <img
                 src="/icons/externalArrow.svg"
                 alt=""
-                class="h-5 w-5 transition-transform ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]"
+                class="h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
               />
             </li>
           </a>
           <a href="/uses">
             <li
-              class="group relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6 after:bg-b-willow"
+              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
                 Check out my
@@ -111,7 +111,7 @@ import Header from "../components/layout/Header.astro";
               <img
                 src="/icons/externalArrow.svg"
                 alt=""
-                class="h-5 w-5 transition-transform ease-in-out group-hover:-translate-y-[2px] group-hover:translate-x-[2px]"
+                class="h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
               />
             </li>
           </a>

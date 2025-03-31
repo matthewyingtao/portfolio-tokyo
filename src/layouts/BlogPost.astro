@@ -44,7 +44,7 @@ const length = countWords(Astro.props.rawContent());
         <img
           src="/dotssmall.svg"
           alt=""
-          class="absolute -bottom-2 left-0 top-0 -z-10 -translate-x-12"
+          class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12"
         />
         <h1 class="mb-[4.5rem]">{title}</h1>
 
@@ -59,7 +59,7 @@ const length = countWords(Astro.props.rawContent());
         </div>
       </aside>
       <section
-        class="content-md mt-2 w-full max-w-[55ch] grow text-b-gray md:w-0"
+        class="content-md text-b-gray mt-2 w-full max-w-[55ch] grow md:w-0"
       >
         <slot />
       </section>
