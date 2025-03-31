@@ -2,19 +2,14 @@
 
 @theme {
   --text-*: initial;
-  --text-xs: 0.75rem, calc(1.2em + 1ex);
-  --text-sm: 0.875rem, calc(1.2em + 1ex);
-  --text-base: 1rem, calc(1.2em + 1ex);
-  --text-lg: 1.125rem, calc(1.2em + 1ex);
-  --text-xl: 1.25rem, calc(1.2em + 1ex);
-  --text-2xl: 1.5rem, calc(1.2em + 1ex);
-  --text-3xl: 1.875rem, calc(1.2em + 1ex);
-  --text-4xl: 2.25rem, calc(1.2em + 1ex);
-  --text-5xl: 3rem, calc(1.2em + 1ex);
-  --text-6xl: 3.75rem, calc(1.2em + 1ex);
-  --text-7xl: 4.5rem, calc(1.2em + 1ex);
-  --text-8xl: 6rem, calc(1.2em + 1ex);
-  --text-9xl: 8rem, calc(1.2em + 1ex);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
 
   --color-b-gray: #8b8b8b;
   --color-b-light-gray-cloud: #d4dcda;
