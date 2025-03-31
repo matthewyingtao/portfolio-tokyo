@@ -23,7 +23,7 @@ const { pathname } = Astro.url;
 
 <header>
   <nav
-    class="flex justify-center gap-4 pb-24 pt-12 md:justify-start md:gap-8 lg:gap-16"
+    class="flex justify-center gap-4 pb-24 pt-12 md:justify-start md:gap-8 lg:gap-10"
   >
     {
       navLinks.map(({ href, text }, i) => {
@@ -45,7 +45,9 @@ const { pathname } = Astro.url;
               ]}
               transition:name={"dot" + i}
             />
-            <span transition:name={"text" + i}>{text}</span>
+            <span class="hover:underline" transition:name={"text" + i}>
+              {text}
+            </span>
           </a>
         );
       })
