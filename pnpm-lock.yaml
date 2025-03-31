@@ -45,8 +45,8 @@ importers:
         specifier: ^1.6.6
         version: 1.6.6
       tailwindcss:
-        specifier: ^3.4.17
-        version: 3.4.17
+        specifier: ^4.0.17
+        version: 4.0.17
       tinacms:
         specifier: ^2.7.3
         version: 2.7.3(@types/react@19.0.12)(abstract-level@1.0.4)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(sucrase@3.35.0)(typescript@5.8.2)

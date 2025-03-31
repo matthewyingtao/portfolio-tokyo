@@ -1,5 +1,47 @@
 @import "tailwindcss";
 
+@theme {
+  --text-*: initial;
+  --text-xs: 0.75rem, calc(1.2em + 1ex);
+  --text-sm: 0.875rem, calc(1.2em + 1ex);
+  --text-base: 1rem, calc(1.2em + 1ex);
+  --text-lg: 1.125rem, calc(1.2em + 1ex);
+  --text-xl: 1.25rem, calc(1.2em + 1ex);
+  --text-2xl: 1.5rem, calc(1.2em + 1ex);
+  --text-3xl: 1.875rem, calc(1.2em + 1ex);
+  --text-4xl: 2.25rem, calc(1.2em + 1ex);
+  --text-5xl: 3rem, calc(1.2em + 1ex);
+  --text-6xl: 3.75rem, calc(1.2em + 1ex);
+  --text-7xl: 4.5rem, calc(1.2em + 1ex);
+  --text-8xl: 6rem, calc(1.2em + 1ex);
+  --text-9xl: 8rem, calc(1.2em + 1ex);
+
+  --color-b-gray: #8b8b8b;
+  --color-b-light-gray-cloud: #d4dcda;
+  --color-b-minato: #80989b;
+  --color-b-white: #f4f4f4;
+  --color-b-willow-dark: #213809;
+  --color-b-willow: #c8d5bb;
+
+  --spacing-gutter: var(--gutter);
+
+  --grid-template-columns-14: var(--gutter) repeat(12, minmax(0, 1fr))
+    var(--gutter);
+
+  --animate-fade-up: fade-up 0.15s ease-in-out;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: 0.5rem;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 body {
   font-family: "PP Mori", sans-serif;
   line-height: calc(1.2em + 1ex);
@@ -174,7 +216,7 @@ body {
 }
 
 .content-md pre {
-  @apply border-b-willow mb-6 rounded-sm border p-4 text-base;
+  @apply border-b-willow mb-6 rounded-xs border p-4 text-base;
 }
 
 .content-md img {
