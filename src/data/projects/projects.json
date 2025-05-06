@@ -1,6 +1,12 @@
 {
   "projects": [
     {
+      "title": "Much to Learn About Countries",
+      "description": "A browser game where you are given a country and try and suggest three things the country is known for. Uses React-Router v7, Tailwind and OpenAI 4.1o as the GPT model.",
+      "date": "2025-05-05T12:00:00.000Z",
+      "image": "/uploads/much-to-learn-about-countries.netlify.app_.png"
+    },
+    {
       "title": "Affinity",
       "description": "The capstone project for my computer science degree, Affinity is a mobile app built mainly with React Native and Fastify. The app is an alternative approach to what an ethical dating app could look like, avoiding addictive patterns such as swiping. Affinity also gives much more filtering control to the user, rather than relying on an algorithm.",
       "date": "2024-10-23T11:00:00.000Z",
