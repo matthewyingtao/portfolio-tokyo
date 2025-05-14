@@ -10,25 +10,25 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.2.2",
+    "@astrojs/mdx": "^4.2.6",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.3.0",
-    "@tailwindcss/vite": "^4.0.17",
-    "@tinacms/cli": "^1.5.29",
+    "@astrojs/sitemap": "^3.4.0",
+    "@tailwindcss/vite": "^4.1.6",
+    "@tinacms/cli": "^1.9.7",
     "alfaaz": "^1.1.0",
-    "astro": "^5.5.5",
-    "astro-robots-txt": "^0.5.0",
-    "astro-seo": "^0.8.0",
+    "astro": "^5.7.13",
+    "astro-robots-txt": "^1.0.0",
+    "astro-seo": "^0.8.4",
     "final-form": "^4.20.10",
     "gray-matter": "^4.0.3",
     "slugify": "^1.6.6",
-    "tailwindcss": "^4.0.17",
-    "tinacms": "^2.7.3"
+    "tailwindcss": "^4.1.6",
+    "tinacms": "^2.7.7"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.11"
   },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+  "packageManager": "pnpm@10.11.0"
 }
