@@ -72,39 +72,7 @@ body {
 
 @font-face {
   font-family: "PP Mori";
-  src:
-    url("/fonts/PPMori-ExtraBold.woff2") format("woff2"),
-    url("/fonts/PPMori-ExtraBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src:
-    url("/fonts/PPMori-ExtraBoldItalic.woff2") format("woff2"),
-    url("/fonts/PPMori-ExtraBoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src:
-    url("/fonts/PPMori-SemiBoldItalic.woff2") format("woff2"),
-    url("/fonts/PPMori-SemiBoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src:
-    url("/fonts/PPMori-Regular.woff2") format("woff2"),
-    url("/fonts/PPMori-Regular.woff") format("woff");
+  src: url("/fonts/PPMori-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -112,19 +80,7 @@ body {
 
 @font-face {
   font-family: "PP Mori";
-  src:
-    url("/fonts/PPMori-Extralight.woff2") format("woff2"),
-    url("/fonts/PPMori-Extralight.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src:
-    url("/fonts/PPMori-RegularItalic.woff2") format("woff2"),
-    url("/fonts/PPMori-RegularItalic.woff") format("woff");
+  src: url("/fonts/PPMori-RegularItalic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -132,40 +88,8 @@ body {
 
 @font-face {
   font-family: "PP Mori";
-  src:
-    url("/fonts/PPMori-SemiBold.woff2") format("woff2"),
-    url("/fonts/PPMori-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori Book";
-  src:
-    url("/fonts/PPMori-BookItalic.woff2") format("woff2"),
-    url("/fonts/PPMori-BookItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src:
-    url("/fonts/PPMori-ExtralightItalic.woff2") format("woff2"),
-    url("/fonts/PPMori-ExtralightItalic.woff") format("woff");
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori Book";
-  src:
-    url("/fonts/PPMori-Book.woff2") format("woff2"),
-    url("/fonts/PPMori-Book.woff") format("woff");
-  font-weight: 300;
+  src: url("/fonts/PPMori-ExtraBold.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
