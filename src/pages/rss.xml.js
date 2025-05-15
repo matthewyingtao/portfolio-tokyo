@@ -1,10 +1,11 @@
-import rss from "@astrojs/rss";
+import rss, { pagesGlobToRssItems } from "@astrojs/rss";
 
-export const GET = () =>
-  rss({
+export async function GET(context) {
+  return rss({
     title: "Matthew Tao",
     description:
       "Matthew Tao is an Auckland based front-end developer who focuses on the little things that make a website delightful.",
-    site: import.meta.env.SITE,
-    items: import.meta.glob("./blog/**/*.md"),
+    site: context.site,
+    items: await pagesGlobToRssItems(import.meta.glob("./blog/**/*.md")),
   });
+}
