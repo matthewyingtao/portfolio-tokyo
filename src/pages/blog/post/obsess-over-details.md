@@ -15,9 +15,9 @@ Why do I say this? Well, think about what happens in a typical AI workflow. In t
 
 In this case, there are a couple more angles to think about.
 
-Firstly, the image you’re asking for may be genuinely in bad taste. A “turtle on top of a stack of money” sounds incredibly tacky, but I’ve seen people use similar images for their social media posts. For someone who doesn’t care about what they’re posting, whether it’s personal or work related, they just want *an* image, whatever fits the vibe they’re going for. If it’s for marriage, then an image that evokes holy, purity vibes. For a beach party, the invite should have a fun, rad looking illustration.
+Firstly, the image you’re asking for may be genuinely in bad taste. A “turtle on top of a stack of money” sounds incredibly tacky, but I’ve seen people use similar images for their social media posts. For someone who doesn’t care about what they’re posting, whether it’s personal or work related, they just want _an_ image, whatever fits the vibe they’re going for. If it’s for marriage, then an image that evokes holy, purity vibes. For a beach party, the invite should have a fun, rad looking illustration.
 
-Secondly, why is the art often so incredibly bland? After a lot of thinking, I feel that I’ve finally come to an answer that I’m happy with. The answer is in the details. Whenever AI is used to create work, <small>(Image generation, write an essay, write an entire computer program, etc)</small> rather than aid human work, <small>(e.g. spotting errors in writing, creating a topic structure for an essay to be written)</small> it’s always in broad strokes. It’s incredibly frustrating for me to see so many people accept the AI work as “good enough” when it so often fails in the details.
+Secondly, why is the art often so incredibly bland? After a lot of thinking, I feel that I’ve finally come to an answer that I’m happy with. The answer is in the details. Whenever AI is used to create work, <small>_(Image generation, write an essay, write an entire computer program, etc)_</small> rather than aid human work, <small>_(e.g. spotting errors in writing, creating a topic structure for an essay to be written)_</small> it’s always in broad strokes. It’s incredibly frustrating for me to see so many people accept the AI work as “good enough” when it so often fails in the details.
 
 > “Everything is important ― that success is in the details.”
 > ― Steve Jobs
@@ -32,7 +32,7 @@ Asking ChatGPT for one gives me this:
 
 In the absence of more detail, it defaults to giving me the most button-looking-button.
 
-If I was a small business owner [vibe coding](https://en.wikipedia.org/wiki/Vibe_coding) myself a shopfront website, I would probably lack the attention to detail to consider things like hover & active animations, accessibility and SEO faults that might need to be checked. AI won’t do these things without being asked explicitly. You would need someone to be knowledgeable about these topics, and to *know* what to ask for.
+If I was a small business owner [vibe coding](https://en.wikipedia.org/wiki/Vibe_coding) myself a shopfront website, I would probably lack the attention to detail to consider things like hover & active animations, accessibility and SEO faults that might need to be checked. AI won’t do these things without being asked explicitly. You would need someone to be knowledgeable about these topics, and to _know_ what to ask for.
 
 A programmer-designer could look at the button and tweak it so that [everything feels “just right”](https://stephango.com/in-good-hands). This is primarily why I believe that at least for a long time, AI won’t replace **people who care**.
 
@@ -43,7 +43,7 @@ A programmer-designer could look at the button and tweak it so that [everything 
 
 We can see the effects of this in the recent launch of [Figma Sites](https://www.figma.com/sites/). Kevin Powell’s video, “[Figma Sites Is Worse Than You Might Have Thought](https://www.youtube.com/watch?v=ZsFIvULxkHI)” covers the flaws in the product. These sites are somewhat nonsense from a code standpoint, with a lack of structure, misuse of `<divs>` as buttons, and no heading tags. What does this mean to a non-programmer? For one, it means that the website will likely be penalised on Google’s search ranking for not being easily read. It also means that anyone who uses a screen reader (i.e. the blind or visually impaired) might struggle to navigate and read the content.
 
-These mistakes are really basic stuff. Maybe there was a time crunch, and they *really* couldn’t avoid shipping the product in such a broken state, but it’s hard for me to believe that there were people in control of Figma Sites who cared about the code output.
+These mistakes are really basic stuff. Maybe there was a time crunch, and they _really_ couldn’t avoid shipping the product in such a broken state, but it’s hard for me to believe that there were people in control of Figma Sites who cared about the code output.
 
 ## So then, what shall we do?
 
