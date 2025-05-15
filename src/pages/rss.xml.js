@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 
-export const get = () =>
+export const GET = () =>
   rss({
     title: "Matthew Tao",
     description:
