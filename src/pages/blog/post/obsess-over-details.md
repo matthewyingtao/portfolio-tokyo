@@ -20,6 +20,7 @@ Firstly, the image you’re asking for may be genuinely in bad taste. A “turtl
 Secondly, why is the art often so incredibly bland? After a lot of thinking, I feel that I’ve finally come to an answer that I’m happy with. The answer is in the details. Whenever AI is used to create work, <small>_(Image generation, write an essay, write an entire computer program, etc)_</small> rather than aid human work, <small>_(e.g. spotting errors in writing, creating a topic structure for an essay to be written)_</small> it’s always in broad strokes. It’s incredibly frustrating for me to see so many people accept the AI work as “good enough” when it so often fails in the details.
 
 > “Everything is important ― that success is in the details.”
+>
 > ― Steve Jobs
 
 People who spend a lot of time dealing with AI know that it’s not very difficult to recognise its writing or images. I think a large part of that is because none of the details make sense. An artist can only draw in their lens of the world. A writer can only write through their comprehension of life. These details of how sentences flow, how brush strokes combine, are what we appreciate as a good piece of art. I think the idea that “AI can only replicate the ability of artists” holds true in that it doesn’t have the same attention to detail as the human who cares.
@@ -36,7 +37,8 @@ If I was a small business owner [vibe coding](https://en.wikipedia.org/wiki/Vibe
 
 A programmer-designer could look at the button and tweak it so that [everything feels “just right”](https://stephango.com/in-good-hands). This is primarily why I believe that at least for a long time, AI won’t replace **people who care**.
 
-> Delicacy of taste is as much to be desired and cultivated as delicacy of passion is to be lamented, and to be remedied, if possible. The good or ill accidents of life are very little at our disposal; but we are pretty much masters what books we shall read, what diversions we shall partake of, and what company we shall keep…When a man is possessed of that talent, he is more happy by what pleases his taste, than by what gratifies his appetites, and receives more enjoyment from a poem or a piece of reasoning than the most expensive luxury can afford.
+> "Delicacy of taste is as much to be desired and cultivated as delicacy of passion is to be lamented, and to be remedied, if possible. The good or ill accidents of life are very little at our disposal; but we are pretty much masters what books we shall read, what diversions we shall partake of, and what company we shall keep…When a man is possessed of that talent, he is more happy by what pleases his taste, than by what gratifies his appetites, and receives more enjoyment from a poem or a piece of reasoning than the most expensive luxury can afford."
+>
 > ― David Hume⁠, Essays Moral, Political, Literary⁠ 1777 (⁠Essay I: “Of The Delicacy Of Taste And Passion”)
 
 ## Figma Sites is the result of a lack of care

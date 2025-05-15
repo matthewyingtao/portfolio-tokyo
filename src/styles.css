@@ -150,6 +150,14 @@ body {
   @apply list-inside list-decimal;
 }
 
+.content-md blockquote {
+  @apply border-b-willow mb-6 border-l-2 px-4 py-2 text-base;
+}
+
+.content-md blockquote p:last-child {
+  @apply mt-[-1ex];
+}
+
 .noise {
   position: fixed;
   inset: 0;
