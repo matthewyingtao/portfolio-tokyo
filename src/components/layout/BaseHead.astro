@@ -1,6 +1,6 @@
 ---
 import { SEO } from "astro-seo";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import "../../styles.css";
 
 export interface Props {
@@ -64,4 +64,4 @@ const { title, description, image, publishedTime, modifiedTime } = Astro.props;
     creator: "@MatthewTao5",
   }}
 />
-<ViewTransitions />
+<ClientRouter />
