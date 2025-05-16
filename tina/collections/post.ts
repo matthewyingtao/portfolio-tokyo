@@ -4,13 +4,8 @@ export const PostCollection: Collection = {
   name: "post",
   label: "Posts",
   path: "src/pages/blog/post",
-  match: {
-    exclude: "src/pages/blog",
-  },
-  defaultItem() {
-    return {
-      layout: "../../../layouts/BlogPost.astro",
-    };
+  defaultItem: {
+    layout: "../../../layouts/BlogPost.astro",
   },
   fields: [
     {

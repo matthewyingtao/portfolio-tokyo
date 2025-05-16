@@ -5,12 +5,6 @@ export const ProjectCollection: Collection = {
   label: "Projects",
   path: "src/data/projects",
   format: "json",
-  ui: {
-    allowedActions: {
-      create: false,
-      delete: false,
-    },
-  },
   fields: [
     {
       label: "Projects",

@@ -7,10 +7,8 @@ export const PageCollection: Collection = {
   match: {
     exclude: "blog/**/**",
   },
-  defaultItem() {
-    return {
-      layout: "../layouts/BlogPost.astro",
-    };
+  defaultItem: {
+    layout: "../layouts/BlogPost.astro",
   },
   fields: [
     {
