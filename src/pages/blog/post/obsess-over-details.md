@@ -29,7 +29,7 @@ Next, let's look at a contrived but isolated example.
 
 Asking ChatGPT for one gives me this:
 
-[a generic blue button with rounded borders](/uploads/image (2).png)
+![A generic blue button with rounded borders](/uploads/image (2).png)
 
 In the absence of more detail, it defaults to giving me the most button-looking-button.
 
