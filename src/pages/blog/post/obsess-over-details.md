@@ -9,11 +9,9 @@ lastEdit: 2025-05-15T12:00:00.000Z
 heroImage: /uploads/GgHCpf5XAAAaomY.jpg
 ---
 
-The loss of craft is what I expect the biggest impact of AI will be over the next few years. When AI is used by the 99% of people who simply clock into work without care for their craft, the world will get blander and more average.
+The biggest impact AI will have over the next few years is going to be the loss of craft. When AI is used by the 99% of people who simply clock into work without care for their craft, the world will get blander and more average.
 
-Why do I say this? Well, think about what happens in a typical AI workflow. In the case of AI image generation, you ask for a “Close up shot of a turtle on top of a stack of money, eyes closed, cartoon style” and you get… a mathematical approximation of what you were asking for. In other words, you get an image that’s “good enough”.
-
-In this case, there are a couple more angles to think about.
+Why do I say this? Well, let's examine a typical AI workflow. In the case of AI image generation, you ask for a “Close up shot of a turtle on top of a stack of money, eyes closed, cartoon style” and you get… a mathematical approximation of what you were asking for. In other words, you get an image that’s “good enough”.
 
 Firstly, the image you’re asking for may be genuinely in bad taste. A “turtle on top of a stack of money” sounds incredibly tacky, but I’ve seen people use similar images for their social media posts. For someone who doesn’t care about what they’re posting, whether it’s personal or work related, they just want _an_ image, whatever fits the vibe they’re going for. If it’s for marriage, then an image that evokes holy, purity vibes. For a beach party, the invite should have a fun, rad looking illustration.
 
@@ -25,11 +23,13 @@ Secondly, why is the art often so incredibly bland? After a lot of thinking, I f
 
 People who spend a lot of time dealing with AI know that it’s not very difficult to recognise its writing or images. I think a large part of that is because none of the details make sense. An artist can only draw in their lens of the world. A writer can only write through their comprehension of life. These details of how sentences flow, how brush strokes combine, are what we appreciate as a good piece of art. I think the idea that “AI can only replicate the ability of artists” holds true in that it doesn’t have the same attention to detail as the human who cares.
 
-Let’s look at a more isolated example.
+Next, let's look at a contrived but isolated example.
 
 ## Lets say I wanted a button CTA button
 
 Asking ChatGPT for one gives me this:
+
+[a generic blue button with rounded borders](/uploads/image (2).png)
 
 In the absence of more detail, it defaults to giving me the most button-looking-button.
 
@@ -41,6 +41,8 @@ A programmer-designer could look at the button and tweak it so that [everything 
 >
 > ― David Hume⁠, Essays Moral, Political, Literary⁠ 1777 (⁠Essay I: “Of The Delicacy Of Taste And Passion”)
 
+This lack of attention to detail is not limited to art or writing, it also shows up in real-world products, as we see with Figma Sites.
+
 ## Figma Sites is the result of a lack of care
 
 We can see the effects of this in the recent launch of [Figma Sites](https://www.figma.com/sites/). Kevin Powell’s video, “[Figma Sites Is Worse Than You Might Have Thought](https://www.youtube.com/watch?v=ZsFIvULxkHI)” covers the flaws in the product. These sites are somewhat nonsense from a code standpoint, with a lack of structure, misuse of `<divs>` as buttons, and no heading tags. What does this mean to a non-programmer? For one, it means that the website will likely be penalised on Google’s search ranking for not being easily read. It also means that anyone who uses a screen reader (i.e. the blind or visually impaired) might struggle to navigate and read the content.
@@ -49,4 +51,6 @@ These mistakes are really basic stuff. Maybe there was a time crunch, and they _
 
 ## So then, what shall we do?
 
-AI can’t replace the detail-work you do. Asking it to write an essay about Tang Dynasty ideals will only produce an average essay. If you want to make something amazing, then you have to give a damn, about each and every bit of the process, how each detail lines up, how other people will receive each piece. An average person with average tastes, who produces slop will only get so far without developing their ability to sense what’s wrong.
+AI can write thousands of essays per hour, about any topic you'd like. When everything is endlessly producible, detail is what sets human work apart. It's still true that the work of a dedicated hand is easily separable to generic outputs of a machine. With art, writing and programs, what makes something worth using is now the care that went into it, the proof of work that sets the package apart from the "good enough". And hey, maybe eventually most programming work _will_ be done by AI, but someone has to at least take the time and exercise their good taste to tell it exactly what to do.
+
+Honestly, if you're dedicated enough and you give a damn, you're already ahead of most people. Care and being able to detail exactly what's wrong is a skill, one that will only get more useful as time goes on.
