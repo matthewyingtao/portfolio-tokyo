@@ -1,0 +1,56 @@
+---
+const navLinks = [
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/blog",
+    text: "Blog",
+  },
+  {
+    href: "/projects",
+    text: "Projects",
+  },
+  {
+    href: "/about",
+    text: "About",
+  },
+];
+
+const { pathname } = Astro.url;
+---
+
+<header>
+  <nav
+    class="flex justify-center gap-4 pt-12 pb-24 md:justify-start md:gap-8 lg:gap-10"
+  >
+    {
+      navLinks.map(({ href, text }, i) => {
+        let isActive;
+
+        // e.g /blog matches /blog/ and /blog/astro but not /about
+        isActive = pathname.startsWith(href) && pathname.length >= href.length;
+
+        if (href === "/") {
+          isActive = pathname == href;
+        }
+
+        return (
+          <a href={href} class="relative isolate">
+            <div
+              class:list={[
+                "green-fade absolute -top-[0.875rem] -left-4 -z-10 h-11 w-11 rounded-full",
+                isActive ? "opacity-100" : "translate-y-4 opacity-0",
+              ]}
+              transition:name={"dot" + i}
+            />
+            <span class="hover:underline" transition:name={"text" + i}>
+              {text}
+            </span>
+          </a>
+        );
+      })
+    }
+  </nav>
+</header>

@@ -1,38 +1,29 @@
 ---
-import { countWords } from "alfaaz";
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import ExpandedContact from "../components/ExpandedContact.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-import BaseHead from "../components/layout/BaseHead.astro";
-import ExpandedContact from "../components/layout/ExpandedContact.astro";
-import Header from "../components/layout/Header.astro";
+import Header from "../components/Header.astro";
 
-import type { MarkdownLayoutProps } from "astro";
+export type Props = CollectionEntry<"blog">["data"] & {
+  minutesRead: number;
+  wordCount: number;
+};
 
-type Props = MarkdownLayoutProps<{
-  title: string;
-  description: string;
-  pubDate: string;
-  lastEdit: string;
-  heroImage: string;
-  length: number;
-}>;
-
-const { title, description, pubDate, lastEdit, heroImage } =
-  Astro.props.frontmatter;
-
-const length = countWords(Astro.props.rawContent());
+const { title, description, pubDate, updatedDate, minutesRead, wordCount } =
+  Astro.props;
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <BaseHead
       title={title}
       description={description}
-      publishedTime={pubDate}
-      modifiedTime={lastEdit}
-      image={heroImage}
+      pubDate={pubDate}
+      updatedDate={updatedDate}
     />
   </head>
+
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>
 
@@ -49,12 +40,12 @@ const length = countWords(Astro.props.rawContent());
         <h1 class="mb-[4.5rem]">{title}</h1>
 
         <div class="flex flex-col">
-          <FormattedDate dateString={pubDate} />
+          <FormattedDate date={pubDate} />
           <span>
-            {length} words
+            {wordCount} words
           </span>
           <span>
-            {Math.ceil(length / 200)} min read
+            {minutesRead} min read
           </span>
         </div>
       </aside>

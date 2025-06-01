@@ -1,17 +1,17 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-export interface Props extends HTMLAttributes<"time"> {
-  dateString: string;
+interface Props extends HTMLAttributes<"time"> {
+  date: Date | string;
 }
 
-const { dateString, ...attrs } = Astro.props;
+const { date, ...attrs } = Astro.props;
 
-const date = new Date(dateString);
+const dateObj = typeof date === "string" ? new Date(date) : date;
 ---
 
-<time datetime={date.toISOString()} {...attrs}>
+<time datetime={dateObj.toISOString()} {...attrs}>
   {
-    date.toLocaleDateString("en-us", {
+    dateObj.toLocaleDateString("en-us", {
       year: "numeric",
       month: "short",
       day: "numeric",

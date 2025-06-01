@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+@theme {
+  --text-*: initial;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+
+  --color-b-gray: #8b8b8b;
+  --color-b-light-gray-cloud: #d4dcda;
+  --color-b-minato: #80989b;
+  --color-b-white: #f4f4f4;
+  --color-b-willow-dark: #213809;
+  --color-b-willow: #c8d5bb;
+
+  --spacing-gutter: var(--gutter);
+
+  --grid-template-columns-14: var(--gutter) repeat(12, minmax(0, 1fr))
+    var(--gutter);
+
+  --animate-fade-up: fade-up 0.15s ease-in-out;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: 0.5rem;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  font-family: "PP Mori", sans-serif;
+  line-height: calc(1.2em + 1ex);
+  background-image: url("/scribbleTop.svg"), url("/scribbleBottom.svg");
+  background-repeat: no-repeat;
+  background-position:
+    0% 0%,
+    50% 10rem;
+  @apply bg-b-white text-b-willow-dark text-lg;
+}
+
+:root {
+  --gutter: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --gutter: 4rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --gutter: 6rem;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  :root {
+    --gutter: 12rem;
+  }
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-RegularItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-ExtraBold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.content-md {
+  @apply text-b-willow-dark;
+}
+
+.content-md > :first-child {
+  @apply -mt-2;
+}
+
+.content-md > :first-child:is(h1, h2, h3, h4, h5, h6) {
+  @apply mt-0 leading-[0.95];
+}
+
+.content-md h1 {
+  @apply text-b-gray mt-[1.25em] mb-[0.75ex] text-3xl;
+}
+
+.content-md h2 {
+  @apply text-b-gray mt-[1.25em] mb-[0.75ex] text-2xl;
+}
+
+.content-md h3 {
+  @apply text-b-gray mt-[1.25em] mb-[0.75ex] text-xl;
+}
+
+.content-md h4 {
+  @apply text-b-gray mt-[1.25em] mb-[0.75ex] text-lg;
+}
+
+.content-md h5 {
+  @apply text-b-gray mt-[1.25em] mb-[0.75ex] text-base;
+}
+
+.content-md p {
+  @apply mt-[1.125ex] mb-[1ex];
+}
+
+.content-md a {
+  @apply text-b-minato decoration-b-minato underline decoration-wavy underline-offset-1;
+}
+
+.content-md pre {
+  @apply border-b-willow mb-6 rounded-xs border p-4 text-base;
+}
+
+.content-md img {
+  @apply mb-6;
+}
+
+.content-md ul {
+  @apply list-inside list-disc;
+}
+
+.content-md ol {
+  @apply list-inside list-decimal;
+}
+
+.content-md blockquote {
+  @apply border-b-willow mb-6 border-l-2 px-4 py-2 text-base;
+}
+
+.content-md blockquote p:last-child {
+  @apply mt-[-1ex];
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  mix-blend-mode: overlay;
+  background-image: url(/noise.webp);
+  pointer-events: none;
+}
+
+.green-fade {
+  background: linear-gradient(180deg, #c8d5bb 0%, #e0f3cd 100%);
+}
+
+.__designer-cascade.first {
+  opacity: 1 !important;
+}
+
+.__designer-cascade {
+  --i-th: 0;
+  --cascade-size: calc(4 * pow(1.5, var(--i-th)));
+  --cumulative-cascase-px: calc(8 * (pow(1.5, var(--i-th) + 1) - 1) * 1px);
+  margin-top: calc(var(--cascade-size) * 1px);
+  translate: 0 calc(-1 * var(--cumulative-cascase-px));
+  opacity: 0;
+  transition:
+    translate 0.5s calc(var(--cascade-size) * 5ms),
+    opacity 0.5s calc(var(--cascade-size) * 5ms);
+}
+
+.left-sidebar:hover .__designer-cascade {
+  translate: 0 0;
+  opacity: calc(var(--i-th) * 0.1);
+}

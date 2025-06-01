@@ -1,11 +1,11 @@
 ---
+import BaseHead from "../components/BaseHead.astro";
+import ExpandedContact from "../components/ExpandedContact.astro";
+import FibbonaciHeading from "../components/FibbonaciHeading.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-import BaseHead from "../components/layout/BaseHead.astro";
-import ExpandedContact from "../components/layout/ExpandedContact.astro";
-import FibbonaciHeading from "../components/layout/FibbonaciHeading.astro";
-import Header from "../components/layout/Header.astro";
+import Header from "../components/Header.astro";
 
-import { projects } from "../data/projects/projects.json";
+import { projects } from "../content/projects.json";
 ---
 
 <!doctype html>
@@ -31,7 +31,7 @@ import { projects } from "../data/projects/projects.json";
               <div class="flex flex-col gap-5">
                 <div class="flex justify-between leading-[0.95]">
                   <h2>{title}</h2>
-                  <FormattedDate dateString={date} class="text-b-minato" />
+                  <FormattedDate date={new Date(date)} class="text-b-minato" />
                 </div>
 
                 <img src={image} alt="" class="aspect-video object-cover" />

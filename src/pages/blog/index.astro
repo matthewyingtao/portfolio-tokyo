@@ -1,34 +1,25 @@
 ---
-import { countWords } from "alfaaz";
-import matter from "gray-matter";
-import { readFile } from "node:fs/promises";
-import { basename } from "node:path";
-import slugify from "slugify";
+import { getCollection, render } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import ExpandedContact from "../../components/ExpandedContact.astro";
+import FibbonaciHeading from "../../components/FibbonaciHeading.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
-import BaseHead from "../../components/layout/BaseHead.astro";
-import ExpandedContact from "../../components/layout/ExpandedContact.astro";
-import FibbonaciHeading from "../../components/layout/FibbonaciHeading.astro";
-import Header from "../../components/layout/Header.astro";
+import Header from "../../components/Header.astro";
 
-let postsGlob = (await Astro.glob("./post/*.md")).map(async (p) => {
-  const post = await readFile(p.file);
-
-  const { content } = matter(post);
-
-  return {
-    ...p,
-    length: countWords(content),
-    // file name becomes the slug
-    slug: slugify(basename(p.file, ".md")),
-  };
-});
-
-let resolvedPosts = await Promise.all(postsGlob);
-
-resolvedPosts = resolvedPosts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf(),
+const posts = await Promise.all(
+  (await getCollection("blog"))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .map(async (post) => {
+      const { remarkPluginFrontmatter } = await render(post);
+      return {
+        id: post.id,
+        data: {
+          ...post.data,
+          wordCount: remarkPluginFrontmatter.wordCount,
+          minutesRead: remarkPluginFrontmatter.minutesRead,
+        },
+      };
+    }),
 );
 ---
 
@@ -56,24 +47,24 @@ resolvedPosts = resolvedPosts.sort(
         </h1>
         <ul class="flex flex-col gap-16">
           {
-            resolvedPosts.map((post) => (
+            posts.map((post) => (
               <li class="flex flex-col">
                 <a
                   class="text-b-willow-dark mb-1"
-                  href={`/blog/post/${post.slug}`}
+                  href={`/blog/post/${post.id}`}
                 >
-                  {post.frontmatter.title}
+                  {post.data.title}
                 </a>
-                <p class="mb-4">{post.frontmatter.description}</p>
+                <p class="mb-4">{post.data.description}</p>
 
                 <div class="text-b-minato flex items-center justify-between text-base">
                   <span>
-                    <FormattedDate dateString={post.frontmatter.pubDate} /> ·{" "}
-                    {post.length} words · {Math.ceil(post.length / 200)} min
+                    <FormattedDate date={post.data.pubDate} /> ·{" "}
+                    {post.data.wordCount} words · {post.data.minutesRead} min
                     read
                   </span>
 
-                  <a href={`/blog/post/${post.slug}`} class="underline">
+                  <a href={`/blog/post/${post.id}`} class="underline">
                     read more
                   </a>
                 </div>

@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "title": "Much to Learn About Countries",
+      "description": "A browser game where you are given a country and try and suggest three things the country is known for. Uses React-Router v7, Tailwind and OpenAI 4.1o as the GPT model.",
+      "date": "2025-05-05T12:00:00.000Z",
+      "image": "/project-images/much-to-learn-about-countries.png"
+    },
+    {
+      "title": "Affinity",
+      "description": "The capstone project for my computer science degree, Affinity is a mobile app built mainly with React Native and Fastify. The app is an alternative approach to what an ethical dating app could look like, avoiding addictive patterns such as swiping. Affinity also gives much more filtering control to the user, rather than relying on an algorithm.",
+      "date": "2024-10-23T11:00:00.000Z",
+      "image": "/project-images/affinity.jpg"
+    },
+    {
+      "title": "Environ",
+      "description": "An app that utilises AI to encourage recycling. I built this app for my scholarship digital technologies project in year 13, it's made with Flutter and uses an AI model that I trained off data from Kaggle.",
+      "date": "2023-06-29T12:00:00.000Z",
+      "image": "/project-images/environ.webp"
+    },
+    {
+      "title": "blogg",
+      "description": "Despite the name, blogg was a messaging that I made to learn more about developing Flutter apps. It was also a way of getting around my school's internet filter (don't tell anyone!). ",
+      "date": "2023-06-29T12:00:00.000Z",
+      "image": "/project-images/blogg.webp"
+    },
+    {
+      "title": "Gif Creator",
+      "description": "A simple web app that allows you to create meme gifs from images or videos. Built with Flask and ffmpeg-python.",
+      "date": "2023-06-29T12:00:00.000Z",
+      "image": "/project-images/gif-creator.webp"
+    }
+  ]
+}

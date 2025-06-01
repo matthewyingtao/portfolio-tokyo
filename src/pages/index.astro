@@ -1,13 +1,14 @@
 ---
-import BaseHead from "../components/layout/BaseHead.astro";
-import ExpandedContact from "../components/layout/ExpandedContact.astro";
-import Header from "../components/layout/Header.astro";
+import BaseHead from "../components/BaseHead.astro";
+import ExpandedContact from "../components/ExpandedContact.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="mx-gutter overflow-x-hidden">
     <div class="noise"></div>

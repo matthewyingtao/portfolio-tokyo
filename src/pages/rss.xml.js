@@ -1,11 +1,16 @@
-import rss, { pagesGlobToRssItems } from "@astrojs/rss";
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
 export async function GET(context) {
+  const posts = await getCollection("blog");
   return rss({
-    title: "Matthew Tao",
-    description:
-      "Matthew Tao is an Auckland based front-end developer who focuses on the little things that make a website delightful.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     site: context.site,
-    items: await pagesGlobToRssItems(import.meta.glob("./blog/**/*.md")),
+    items: posts.map((post) => ({
+      ...post.data,
+      link: `/blog/post/${post.id}/`,
+    })),
   });
 }

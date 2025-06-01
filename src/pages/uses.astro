@@ -1,0 +1,12 @@
+---
+import { Content, frontmatter } from "../content/uses.md";
+import BlogPost, { type Props } from "../layouts/BlogPost.astro";
+---
+
+<BlogPost
+  {...frontmatter as Props}
+  pubDate={new Date(frontmatter.pubDate)}
+  updatedDate={new Date(frontmatter.updatedDate)}
+>
+  <Content />
+</BlogPost>
