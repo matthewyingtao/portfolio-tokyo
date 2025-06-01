@@ -5,6 +5,7 @@ import ExpandedContact from "../../components/ExpandedContact.astro";
 import FibbonaciHeading from "../../components/FibbonaciHeading.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import Header from "../../components/Header.astro";
+import Noise from "../../components/Noise.astro";
 
 const posts = await Promise.all(
   (await getCollection("blog"))
@@ -32,7 +33,7 @@ const posts = await Promise.all(
     />
   </head>
   <body class="mx-gutter overflow-x-hidden">
-    <div class="noise"></div>
+    <Noise />
 
     <Header />
     <main

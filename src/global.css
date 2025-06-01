@@ -40,6 +40,11 @@
 body {
   font-family: "PP Mori", sans-serif;
   line-height: calc(1.2em + 1ex);
+  background-image: url("/scribbleTop.svg"), url("/scribbleBottom.svg");
+  background-repeat: no-repeat;
+  background-position:
+    0% 0%,
+    50% 10rem;
   @apply bg-b-white text-b-willow-dark text-lg;
 }
 

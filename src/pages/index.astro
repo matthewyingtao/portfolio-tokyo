@@ -1,7 +1,10 @@
 ---
+import Dots from "../assets/dots.svg";
+import ExternalArrow from "../assets/icons/externalArrow.svg";
 import BaseHead from "../components/BaseHead.astro";
 import ExpandedContact from "../components/ExpandedContact.astro";
 import Header from "../components/Header.astro";
+import Noise from "../components/Noise.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
@@ -11,7 +14,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="mx-gutter overflow-x-hidden">
-    <div class="noise"></div>
+    <Noise />
 
     <Header />
     <main
@@ -20,11 +23,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       <aside
         class="green-fade left-sidebar text-b-minato relative hidden rounded-xl px-4 py-6 whitespace-nowrap lg:block"
       >
-        <img
-          src="/dots.svg"
-          alt=""
-          class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12"
-        />
+        <Dots class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12" />
         <p>Second-year</p>
         <p class="mb-[4.5rem]">Computer science</p>
 
@@ -64,10 +63,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 Read my
                 <span class="text-b-willow-dark">blog</span> posts
               </span>
-              <img
-                src="/icons/externalArrow.svg"
-                alt=""
-                class="h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+              <ExternalArrow
+                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
               />
             </li>
           </a>
@@ -79,10 +76,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 View my
                 <span class="text-b-willow-dark">projects</span>
               </span>
-              <img
-                src="/icons/externalArrow.svg"
-                alt=""
-                class="h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+              <ExternalArrow
+                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
               />
             </li>
           </a>
@@ -94,10 +89,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 Find out more
                 <span class="text-b-willow-dark">about me!</span>
               </span>
-              <img
-                src="/icons/externalArrow.svg"
-                alt=""
-                class="h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+              <ExternalArrow
+                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
               />
             </li>
           </a>
@@ -109,10 +102,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 Check out my
                 <span class="text-b-willow-dark">setup</span>
               </span>
-              <img
-                src="/icons/externalArrow.svg"
-                alt=""
-                class="h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+              <ExternalArrow
+                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
               />
             </li>
           </a>

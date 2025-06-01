@@ -1,9 +1,11 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import Dots from "../assets/dotssmall.svg";
 import BaseHead from "../components/BaseHead.astro";
 import ExpandedContact from "../components/ExpandedContact.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Header from "../components/Header.astro";
+import Noise from "../components/Noise.astro";
 
 export type Props = CollectionEntry<"blog">["data"] & {
   minutesRead: number;
@@ -25,18 +27,14 @@ const { title, description, pubDate, updatedDate, minutesRead, wordCount } =
   </head>
 
   <body class="mx-gutter overflow-x-hidden">
-    <div class="noise"></div>
+    <Noise />
 
     <Header title={title} />
     <main
       class="mb-20 flex flex-col flex-nowrap items-center justify-center gap-12 md:flex-row md:items-start md:justify-start xl:gap-24"
     >
       <aside class="sticky top-8 hidden h-fit max-w-[18ch] lg:block">
-        <img
-          src="/dotssmall.svg"
-          alt=""
-          class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12"
-        />
+        <Dots class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12" />
         <h1 class="mb-[4.5rem]">{title}</h1>
 
         <div class="flex flex-col">
