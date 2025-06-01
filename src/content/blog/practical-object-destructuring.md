@@ -73,7 +73,7 @@ There are a few benefits to this approach:
 2. Primitive properties are copied when you use destructuring, which helps to prevent side effects.
 3. VSCode (and probably other code editors) autocompletion can help you when calling the function.
 
-![Code suggestions from VS Code.](/blog-images/codeSuggestion.png)
+![Code suggestions from VS Code.](/blog-images/codeSuggestion.webp)
 
 Number two might be a little confusing to newer programmers and those unfamilliar with JavaScript. Firstly, what is a primitive? A primitive in JavaScript is defined as [data that is not an object and has no methods.](https://developer.mozilla.org/en-US/docs/Glossary/Primitive#:~:text=data%20that%20is%20not%20an%20object%20and%20has%20no%20methods.) This includes strings, numbers and booleans.
 

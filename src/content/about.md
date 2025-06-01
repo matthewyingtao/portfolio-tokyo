@@ -13,7 +13,7 @@ My first encounter with code was at the age of thirteen when I signed up for a c
 
 I liked the idea of creating something completely original and being able to translate an idea into something more concrete, and I started to code in my free time as a hobby. This is when I wrote (more like drag and drop) the **_worst_** code in my life.
 
-![If only I knew what a function was...](/blog-images/scratch.png)
+![If only I knew what a function was...](/blog-images/scratch.webp)
 
 I drew a lot as a kid because I loved art and design. I clearly remember this three-month period where I was absolutely obsessed with designing logos and watched hours and hours of YouTube videos covering them.
 

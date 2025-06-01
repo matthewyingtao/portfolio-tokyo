@@ -82,6 +82,6 @@ So far, after only around 30 minutes, I've implemented a core functionality: pas
 
 And here's what that looks like.
 
-![Pasting some text into my app.](/blog-images/part1Progress.png)
+![Pasting some text into my app.](/blog-images/part1Progress.webp)
 
 That's all for now! You can check out the source code [here](https://github.com/matthewyingtao/Glipma). Stay tuned for more updates!

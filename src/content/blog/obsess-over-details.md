@@ -27,7 +27,7 @@ Next, let's look at a contrived but isolated example.
 
 Asking ChatGPT for one gives me this:
 
-![A generic blue button with rounded borders](/blog-images/chatgpt-button-example.png)
+![A generic blue button with rounded borders](/blog-images/chatgpt-button-example.webp)
 
 In the absence of more detail, it defaults to giving me the most button-looking-button.
 

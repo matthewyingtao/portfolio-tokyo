@@ -17,7 +17,7 @@ The dream of the early web was a place where anyone could create and own their p
 
 My gripe is that compared to the [2023 estimate of 4.9 billion](https://www.forbes.com/advisor/business/social-media-statistics "Forbes - social media trends of 2023") social media users, only a percentage of a percentage actively look to the wider web to provide interesting and novel experiences. What you can find on social media is only a fraction of what could be achieved on a standalone website! This is immediately apparent for long threads on Twitter. The comments on any of such threads are spammed by people who want to avoid the horrible user experience of reading through 12 tweets stacked on top of each other, none fully expanding until you tap on them one by one to read.
 
-![A collection of tweets asking @threadreaderapp to "unroll this thread"](/blog-images/threadunroll.png 'A collection of tweets asking @threadreaderapp to "unroll this thread"')
+![A collection of tweets asking @threadreaderapp to "unroll this thread"](/blog-images/threadunroll.webp 'A collection of tweets asking @threadreaderapp to "unroll this thread"')
 
 The point is, this could've been avoided by making a damn website, and I guarantee you that whatever was being said in the tweets could have been enhanced with links, captioned and carefully positioned images, a sidebar to navigate, etc. The web is capable of SO MUCH MORE than simply displaying content in such a rigid format, and my passion is to explore what's possible.
 

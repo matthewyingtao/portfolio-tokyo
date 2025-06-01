@@ -185,4 +185,4 @@ There you have it! I hope you found this tutorial useful, because it took a long
 
 Oh, and if you're curious, here's how my app's going.
 
-![Started working on a barebones design](/blog-images/part2Progress.png)
+![Started working on a barebones design](/blog-images/part2Progress.webp)
