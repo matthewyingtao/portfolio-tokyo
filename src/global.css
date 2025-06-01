@@ -191,3 +191,11 @@ body {
   translate: 0 0;
   opacity: calc(var(--i-th) * 0.1);
 }
+
+.external-link-icon {
+  display: inline-block;
+  width: 0.5rem;
+  margin-left: 2px;
+  vertical-align: text-top;
+  fill: currentColor;
+}

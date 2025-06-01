@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "format": "prettier --write ./src/**/*.{astro,js,ts,json,md}"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
@@ -23,6 +21,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.12",
+    "rehype-external-links": "^3.0.0",
     "tailwindcss": "^4.1.8"
   }
 }

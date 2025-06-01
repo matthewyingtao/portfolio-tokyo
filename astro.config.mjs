@@ -10,8 +10,7 @@ import themeRosePineDawn from "./src/rose-pine-dawn-color-theme.json";
 
 const blogDir = path.resolve("./src/content/blog");
 
-// https://astro.build/config
-export default defineConfig({
+export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
   site: "https://www.matthewtao.com",
   integrations: [
     sitemap({
@@ -44,13 +43,30 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
-    assetsInclude: ["**/*.md"],
   },
   markdown: {
     shikiConfig: {
       // @ts-expect-error
       theme: themeRosePineDawn,
     },
+    rehypePlugins: [
+      [
+        "rehype-external-links",
+        {
+          rel: ["nofollow", "noopener", "noreferrer"],
+          content: {
+            type: "element",
+            tagName: "img",
+            properties: {
+              src: "/icons/externalArrow.svg",
+              alt: "External link icon",
+            },
+            children: [],
+          },
+          contentProperties: { className: ["external-link-icon"] },
+        },
+      ],
+    ],
     remarkPlugins: [remarkReadingTime],
   },
 });
