@@ -69,4 +69,30 @@ export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
     ],
     remarkPlugins: [remarkReadingTime],
   },
+  experimental: {
+    fonts: [
+      {
+        name: "PP Mori",
+        provider: "local",
+        cssVariable: "--font-ppmori",
+        variants: [
+          {
+            src: ["./src/assets/fonts/PPMori-Regular.woff2"],
+            weight: "400",
+            style: "normal",
+          },
+          {
+            src: ["./src/assets/fonts/PPMori-RegularItalic.woff2"],
+            weight: "400",
+            style: "italic",
+          },
+          {
+            src: ["./src/assets/fonts/PPMori-ExtraBold.woff2"],
+            weight: "600",
+            style: "normal",
+          },
+        ],
+      },
+    ],
+  },
 });

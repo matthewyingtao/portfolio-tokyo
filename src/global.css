@@ -40,11 +40,6 @@
 body {
   font-family: "PP Mori", sans-serif;
   line-height: calc(1.2em + 1ex);
-  background-image: url("/scribbleTop.svg"), url("/scribbleBottom.svg");
-  background-repeat: no-repeat;
-  background-position:
-    0% 0%,
-    50% 10rem;
   @apply bg-b-white text-b-willow-dark text-lg;
 }
 
@@ -68,30 +63,6 @@ body {
   :root {
     --gutter: 12rem;
   }
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src: url("/fonts/PPMori-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src: url("/fonts/PPMori-RegularItalic.woff2") format("woff2");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src: url("/fonts/PPMori-ExtraBold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
 }
 
 .content-md {

@@ -1,4 +1,6 @@
 ---
+import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
 import { SITE_TITLE } from "../consts";
 import "../global.css";
 
@@ -33,27 +35,7 @@ const {
 />
 <meta name="generator" content={Astro.generator} />
 
-<link
-  rel="preload"
-  as="font"
-  href="/fonts/PPMori-Regular.woff2"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-<link
-  rel="preload"
-  as="font"
-  href="/fonts/PPMori-RegularItalic.woff2"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-<link
-  rel="preload"
-  as="font"
-  href="/fonts/PPMori-ExtraBold.woff2"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
+<Font cssVariable="--font-ppmori" preload />
 
 <link rel="canonical" href={canonicalURL} />
 
@@ -86,3 +68,5 @@ const {
     />
   )
 }
+
+<ClientRouter />
