@@ -1,8 +1,15 @@
+---
+title: Meaning, Storytelling & Male Lovers
+description: Storytelling, understanding of meaning, and how that often makes men bad lovers.
+pubDate: 2025-12-18T11:00:00.000Z
+updatedDate: 2025-12-18T11:00:00.000Z
+---
+
 The widespread outrage towards modern (abstract) art is caused by a misunderstanding of meaning or perhaps anti-intellectual rejection of it. Yves Klein's *Blue Monochrome, 1961* at face value is a large blue canvas. That's what the critic would say. But, as the Museum of Modern Art suggests, 
 
 > Klein famously declared the blue sky to be his first artwork and from there continued finding radical new ways to represent the infinite and immaterial in his works. One such strategy was monochrome abstraction—the use of one color  over an entire canvas. Klein saw monochrome painting as an “open window to freedom, as the possibility of being immersed in the immeasurable existence of color.”
 
-![image_2025-12-14T03-55-26Z.png](attachments/image_2025-12-14T03-55-26Z.png)
+![image_2025-12-14T03-55-26Z.png](/blog-images/image_2025-12-14T03-55-26Z.png)
 
 To find these descriptive words that paint a picture (hehe) which imbue the artwork with meaning, is a talent in itself. The artwork is the vessel for meaning. If you sever the story and humanity behind these pieces, you're left with the boring bare reality of the piece — resin pigment on canvas. If, however, you're able to suspend this cynicism that often comes with adulthood and allow yourself to be drawn in by the story, by the infinite blue, you might find yourself in a state of child-like curiosity. It's art in its many forms that allow us to dream outside of the physical realm and keeps that spark of wonder from dissolving.
 
@@ -30,7 +37,7 @@ Consider the very ethically questionable *Cloth Mother/Wire Mother Experiment* c
 
 The experiment separated infant monkeys from their mother immediately after conception, placing them in cages with two chambers, each with its own "mother"; inanimate effigies made from wood and wire, with one covered with cloth, the other left bare. In one variation of the experiment, the wire mother was given a milk bottle for the monkeys to drink from, with the cloth mother providing nothing. 
 
-![Nature_of_Love_Wire_and_cloth_mother_surrogates.jpg](attachments/Nature_of_Love_Wire_and_cloth_mother_surrogates.jpg)
+![Nature_of_Love_Wire_and_cloth_mother_surrogates.jpg](/blog-images/Nature_of_Love_Wire_and_cloth_mother_surrogates.jpg)
 
 Maybe unsurprisingly, the monkeys vastly preferred spending time with the cloth mother, only leaving to get milk as necessity. Though the research methods of the 1950s are far less rigorous than current day; to take this finding at face value we would then make the abstraction that human touch provided value beyond the strictly practical warmth of touch, it soothed and comforted. If we take into account the rest of his experiments we are led to understand comfort as a prerequisite to growth, and particularly, growing into a well-adjusted adult.
 
