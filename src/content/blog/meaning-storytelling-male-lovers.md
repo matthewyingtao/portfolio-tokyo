@@ -9,7 +9,7 @@ The widespread outrage towards modern (abstract) art is caused by a misunderstan
 
 > Klein famously declared the blue sky to be his first artwork and from there continued finding radical new ways to represent the infinite and immaterial in his works. One such strategy was monochrome abstraction—the use of one color  over an entire canvas. Klein saw monochrome painting as an “open window to freedom, as the possibility of being immersed in the immeasurable existence of color.”
 
-![image_2025-12-14T03-55-26Z.png](/blog-images/image_2025-12-14T03-55-26Z.png)
+![image_2025-12-14T03-55-26Z.png](/blog-images/image_2025-12-14T03-55-26Z.jpg)
 
 To find these descriptive words that paint a picture (hehe) which imbue the artwork with meaning, is a talent in itself. The artwork is the vessel for meaning. If you sever the story and humanity behind these pieces, you're left with the boring bare reality of the piece — resin pigment on canvas. If, however, you're able to suspend this cynicism that often comes with adulthood and allow yourself to be drawn in by the story, by the infinite blue, you might find yourself in a state of child-like curiosity. It's art in its many forms that allow us to dream outside of the physical realm and keeps that spark of wonder from dissolving.
 
