@@ -127,7 +127,7 @@ body {
 }
 
 .content-md blockquote {
-  @apply border-b-willow mb-6 border-l-2 px-4 py-2 text-base;
+  @apply border-b-willow mb-6 border-l-2 px-4 pt-8 py-2 text-base;
 }
 
 .content-md blockquote p:last-child {
