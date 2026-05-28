@@ -28,7 +28,7 @@ import { projects } from "@content/projects.json";
         <ul class="flex flex-col gap-12">
           {
             projects.map(({ title, image, date, description }) => (
-              <div class="flex flex-col gap-5">
+              <li class="flex flex-col gap-5">
                 <div class="flex justify-between leading-[0.95]">
                   <h2>{title}</h2>
                   <FormattedDate date={new Date(date)} class="text-b-minato" />
@@ -37,7 +37,7 @@ import { projects } from "@content/projects.json";
                 <img src={image} alt="" class="aspect-video object-cover" />
 
                 <p>{description}</p>
-              </div>
+              </li>
             ))
           }
         </ul>
