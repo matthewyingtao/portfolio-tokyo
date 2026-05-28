@@ -1,14 +1,16 @@
 // @ts-check
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "astro/config";
-import { remarkReadingTime } from "./scripts/remark-reading-time.mjs";
-import themeRosePineDawn from "./src/rose-pine-dawn-color-theme.json";
+import { defineConfig, fontProviders } from "astro/config";
+
+import { remarkReadingTime } from "./config/remark-reading-time.mjs";
+import themeRosePineDawn from "./src/shared/config/rose-pine-dawn-color-theme.json";
 
 export default defineConfig({
   site: "https://www.matthewtao.com",
   integrations: [sitemap()],
   vite: {
+    // @ts-expect-error
     plugins: [tailwindcss()],
   },
   markdown: {
@@ -36,30 +38,33 @@ export default defineConfig({
     ],
     remarkPlugins: [remarkReadingTime],
   },
-  experimental: {
-    fonts: [
-      {
-        name: "PP Mori",
-        provider: "local",
-        cssVariable: "--font-ppmori",
+  fonts: [
+    {
+      name: "PP Mori",
+      provider: fontProviders.local(),
+      cssVariable: "--font-ppmori",
+      options: {
         variants: [
           {
             src: ["./src/assets/fonts/PPMori-Regular.woff2"],
             weight: "400",
             style: "normal",
+            display: "swap",
           },
           {
             src: ["./src/assets/fonts/PPMori-RegularItalic.woff2"],
             weight: "400",
             style: "italic",
+            display: "swap",
           },
           {
             src: ["./src/assets/fonts/PPMori-ExtraBold.woff2"],
             weight: "600",
             style: "normal",
+            display: "swap",
           },
         ],
       },
-    ],
-  },
+    },
+  ],
 });
