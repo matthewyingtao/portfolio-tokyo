@@ -38,7 +38,7 @@
 }
 
 body {
-  font-family: var(--font-dmsans), "DM Sans", sans-serif;
+  font-family: var(--font-dm-sans), "DM Sans", sans-serif;
   letter-spacing: -0.02em;
   line-height: calc(1.2em + 1ex);
   background-image: url("/scribbleTop.svg"), url("/scribbleBottom.svg");

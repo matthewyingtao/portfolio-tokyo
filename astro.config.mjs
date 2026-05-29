@@ -43,12 +43,33 @@ export default defineConfig({
   fonts: [
     {
       name: "DM Sans",
-      provider: fontProviders.google(),
-      cssVariable: "--font-dmsans",
-      weights: [400, 600],
-      styles: ["normal", "italic"],
-      subsets: ["latin"],
-      formats: ["woff2", "woff"],
+      provider: fontProviders.local(),
+      cssVariable: "--font-dm-sans",
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/dm-sans-latin-400-normal.woff2"],
+            weight: "400",
+            style: "normal",
+          },
+          {
+            src: ["./src/assets/fonts/dm-sans-latin-400-italic.woff2"],
+            weight: "400",
+            style: "italic",
+          },
+          {
+            src: ["./src/assets/fonts/dm-sans-latin-600-normal.woff2"],
+            weight: "600",
+            style: "normal",
+          },
+          {
+            src: ["./src/assets/fonts/dm-sans-latin-600-italic.woff2"],
+            weight: "600",
+            style: "italic",
+          },
+        ],
+      },
+      display: "swap",
     },
   ],
 });
