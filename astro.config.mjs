@@ -43,7 +43,7 @@ export default defineConfig({
   fonts: [
     {
       name: "DM Sans",
-      provider: fontProviders.fontsource(),
+      provider: fontProviders.google(),
       cssVariable: "--font-dm-sans",
       weights: [400, 600],
       styles: ["normal", "italic"],
