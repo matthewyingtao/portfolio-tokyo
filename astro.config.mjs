@@ -1,4 +1,5 @@
 // @ts-check
+import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, fontProviders } from "astro/config";
@@ -10,7 +11,6 @@ export default defineConfig({
   site: "https://www.matthewtao.com",
   integrations: [sitemap()],
   vite: {
-    // @ts-expect-error
     plugins: [tailwindcss()],
   },
   markdown: {
@@ -18,25 +18,27 @@ export default defineConfig({
       // @ts-expect-error
       theme: themeRosePineDawn,
     },
-    rehypePlugins: [
-      [
-        "rehype-external-links",
-        {
-          rel: ["nofollow", "noopener", "noreferrer"],
-          content: {
-            type: "element",
-            tagName: "img",
-            properties: {
-              src: "/icons/externalArrow.svg",
-              alt: "External link icon",
+    processor: unified({
+      rehypePlugins: [
+        [
+          "rehype-external-links",
+          {
+            rel: ["nofollow", "noopener", "noreferrer"],
+            content: {
+              type: "element",
+              tagName: "img",
+              properties: {
+                src: "/icons/externalArrow.svg",
+                alt: "External link icon",
+              },
+              children: [],
             },
-            children: [],
+            contentProperties: { className: ["external-link-icon"] },
           },
-          contentProperties: { className: ["external-link-icon"] },
-        },
+        ],
       ],
-    ],
-    remarkPlugins: [remarkReadingTime],
+      remarkPlugins: [remarkReadingTime],
+    }),
   },
   fonts: [
     {
