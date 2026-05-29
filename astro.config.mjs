@@ -42,31 +42,9 @@ export default defineConfig({
   },
   fonts: [
     {
-      name: "PP Mori",
-      provider: fontProviders.local(),
-      cssVariable: "--font-ppmori",
-      options: {
-        variants: [
-          {
-            src: ["./src/assets/fonts/PPMori-Regular.woff2"],
-            weight: "400",
-            style: "normal",
-            display: "swap",
-          },
-          {
-            src: ["./src/assets/fonts/PPMori-RegularItalic.woff2"],
-            weight: "400",
-            style: "italic",
-            display: "swap",
-          },
-          {
-            src: ["./src/assets/fonts/PPMori-ExtraBold.woff2"],
-            weight: "600",
-            style: "normal",
-            display: "swap",
-          },
-        ],
-      },
+      name: "DM Sans",
+      provider: fontProviders.fontsource(),
+      cssVariable: "--font-dm-sans",
     },
   ],
 });

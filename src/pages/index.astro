@@ -1,11 +1,11 @@
 ---
-import Dots from "@assets/dots.svg";
-import ExternalArrow from "@assets/icons/externalArrow.svg";
-import BaseHead from "@components/BaseHead.astro";
-import ExpandedContact from "@components/ExpandedContact.astro";
-import Header from "@components/Header.astro";
-import Noise from "@components/Noise.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "@shared/constants/consts";
+import Dots from "../assets/dots.svg";
+import ExternalArrow from "../assets/icons/externalArrow.svg";
+import BaseHead from "../components/BaseHead.astro";
+import ExpandedContact from "../components/ExpandedContact.astro";
+import Header from "../components/Header.astro";
+import Noise from "../components/Noise.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../shared/constants/consts";
 ---
 
 <!doctype html>
@@ -25,9 +25,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@shared/constants/consts";
       >
         <Dots class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12" />
         <p>Second-year</p>
-        <p class="mb-[4.5rem]">Computer science</p>
+        <p class="mb-18">Computer science</p>
 
-        <h1 class="text-b-willow-dark mb-[4.5rem] text-4xl leading-none">
+        <h1 class="text-b-willow-dark mb-18 text-4xl leading-none">
           <span class="mb-2 block font-medium">陶映渠</span>
           <span class="block">Tao Ying Qu</span>
         </h1>
@@ -37,7 +37,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@shared/constants/consts";
           {
             Array.from({ length: 8 }).map((_, i) => (
               <span
-                class={`__designer-cascade block leading-[0] ${i === 0 && "first"}`}
+                class={`__designer-cascade block leading-0 ${i === 0 && "first"}`}
                 style={{
                   "--i-th": i,
                 }}
@@ -58,56 +58,56 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@shared/constants/consts";
           <li>
             <a
               href="/blog"
-              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6"
+              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
                 Read my
                 <span class="text-b-willow-dark">blog</span> posts
               </span>
               <ExternalArrow
-                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
           </li>
           <li>
             <a
               href="/projects"
-              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6"
+              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
                 View my
                 <span class="text-b-willow-dark">projects</span>
               </span>
               <ExternalArrow
-                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
           </li>
           <li>
             <a
               href="/about"
-              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6"
+              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
                 Find out more
                 <span class="text-b-willow-dark">about me!</span>
               </span>
               <ExternalArrow
-                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
           </li>
           <li>
             <a
               href="/uses"
-              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-[calc(100%+3rem)] after:-translate-x-6"
+              class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
                 Check out my
                 <span class="text-b-willow-dark">setup</span>
               </span>
               <ExternalArrow
-                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-[2px] group-hover:-translate-y-[2px]"
+                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
           </li>

@@ -2,8 +2,8 @@
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 
-import { SITE_TITLE } from "@shared/constants/consts";
-import "@shared/styles/global.css";
+import { SITE_TITLE } from "../shared/constants/consts";
+import "../shared/styles/global.css";
 
 interface Props {
   title: string;
@@ -36,7 +36,7 @@ const {
 />
 <meta name="generator" content={Astro.generator} />
 
-<Font cssVariable="--font-ppmori" preload />
+<Font cssVariable="--font-dm-sans" preload />
 
 <link rel="canonical" href={canonicalURL} />
 

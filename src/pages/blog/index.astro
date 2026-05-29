@@ -1,12 +1,12 @@
 ---
 import { getCollection, render } from "astro:content";
 
-import BaseHead from "@components/BaseHead.astro";
-import ExpandedContact from "@components/ExpandedContact.astro";
-import FibbonaciHeading from "@components/FibbonaciHeading.astro";
-import FormattedDate from "@components/FormattedDate.astro";
-import Header from "@components/Header.astro";
-import Noise from "@components/Noise.astro";
+import BaseHead from "../../components/BaseHead.astro";
+import ExpandedContact from "../../components/ExpandedContact.astro";
+import FibbonaciHeading from "../../components/FibbonaciHeading.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import Header from "../../components/Header.astro";
+import Noise from "../../components/Noise.astro";
 
 const posts = await Promise.all(
   (await getCollection("blog"))
