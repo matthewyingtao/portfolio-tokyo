@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, fontProviders } from "astro/config";
 
 import { remarkReadingTime } from "./config/remark-reading-time.mjs";
+import ExternalArrow from "./src/assets/icons/externalArrow.svg?url";
 import themeRosePineDawn from "./src/shared/config/rose-pine-dawn-color-theme.json";
 
 export default defineConfig({
@@ -26,7 +27,7 @@ export default defineConfig({
             type: "element",
             tagName: "img",
             properties: {
-              src: "/icons/externalArrow.svg",
+              src: ExternalArrow,
               alt: "External link icon",
             },
             children: [],

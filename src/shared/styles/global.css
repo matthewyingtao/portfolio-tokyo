@@ -41,7 +41,8 @@ body {
   font-family: var(--font-dm-sans), "DM Sans", sans-serif;
   letter-spacing: -0.02em;
   line-height: calc(1.2em + 1ex);
-  background-image: url("/scribbleTop.svg"), url("/scribbleBottom.svg");
+  background-image:
+    url("/assets/scribbleTop.svg"), url("/assets/scribbleBottom.svg");
   background-repeat: no-repeat;
   background-position:
     0% 0%,
@@ -140,7 +141,7 @@ body {
   inset: 0;
   z-index: 500;
   mix-blend-mode: overlay;
-  background-image: url(/noise.webp);
+  background-image: url("/assets/noise.webp");
   pointer-events: none;
 }
 

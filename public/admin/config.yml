@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: user/repo
+
+media_folder: /public/assets/blog
+public_folder: /assets/blog
+
+collections:
+- name: blog
+  label: Blog Posts
+  label_singular: Blog Post
+  folder: /src/content/blog
+  create: true
+  extension: md
+  format: frontmatter
+  fields:
+  - { label: Title, name: title, widget: string }
+  - { label: Description, name: description, widget: text }
+  - { label: Published Date, name: pubDate, widget: datetime }
+  - { label: Updated Date, name: updatedDate, widget: datetime, required: false }
+  - { label: Body, name: body, widget: markdown }
+
+- name: pages
+  label: Pages
+  folder: /src/content
+  create: true
+  extension: md
+  format: frontmatter
+  fields:
+  - { label: Title, name: title, widget: string }
+  - { label: Description, name: description, widget: text }
+  - { label: Published Date, name: pubDate, widget: datetime }
+  - { label: Updated Date, name: updatedDate, widget: datetime, required: false }
+  - { label: Body, name: body, widget: markdown }
+
+- name: data
+  label: Data Files
+  files:
+  - name: projects
+    label: Projects
+    file: /src/content/projects.json
+    media_folder: /public/assets/projects
+    public_folder: /assets/projects
+    fields:
+    - label: Projects
+      name: projects
+      widget: list
+      summary: '{{fields.title}}'
+      fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Image, name: image, widget: image }

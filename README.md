@@ -1,6 +1,6 @@
 # Tokyo Portfolio
 
-![blog](/public/social.jpg)
+![blog](/public/assets/social.jpg)
 
 ## Powered by Astro!
 
