@@ -2,7 +2,7 @@
 
 backend:
   name: github
-  repo: user/repo
+  repo: matthewyingtao/portfolio-tokyo
 
 media_folder: /public/assets/blog
 public_folder: /assets/blog
