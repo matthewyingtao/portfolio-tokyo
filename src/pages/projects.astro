@@ -20,26 +20,22 @@ import { projects } from "../content/projects.json";
     <Noise />
 
     <Header />
-    <main
-      class="mb-20 flex flex-wrap justify-center gap-12 md:flex-nowrap md:justify-start xl:gap-24"
-    >
+    <main class="mb-20 flex flex-wrap justify-center gap-12 md:flex-nowrap md:justify-start xl:gap-24">
       <FibbonaciHeading title="Projects" />
       <section class="mt-2 w-[42ch]">
         <ul class="flex flex-col gap-12">
-          {
-            projects.map(({ title, image, date, description }) => (
-              <li class="flex flex-col gap-5">
-                <div class="flex justify-between leading-[0.95]">
-                  <h2>{title}</h2>
-                  <FormattedDate date={new Date(date)} class="text-b-minato" />
-                </div>
+          {projects.map(({ title, image, date, description }) => (
+            <li class="flex flex-col gap-5">
+              <div class="flex justify-between leading-[0.95]">
+                <h2>{title}</h2>
+                <FormattedDate date={new Date(date)} class="text-b-minato" />
+              </div>
 
-                <img src={image} alt="" class="aspect-video object-cover" />
+              <img src={image} alt="" class="aspect-video object-cover" />
 
-                <p>{description}</p>
-              </li>
-            ))
-          }
+              <p>{description}</p>
+            </li>
+          ))}
         </ul>
       </section>
       <ExpandedContact />

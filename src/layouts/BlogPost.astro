@@ -31,26 +31,18 @@ const { title, description, pubDate, updatedDate, minutesRead, wordCount } =
     <Noise />
 
     <Header title={title} />
-    <main
-      class="mb-20 flex flex-col flex-nowrap items-center justify-center gap-12 md:flex-row md:items-start md:justify-start xl:gap-24"
-    >
+    <main class="mb-20 flex flex-col flex-nowrap items-center justify-center gap-12 md:flex-row md:items-start md:justify-start xl:gap-24">
       <aside class="sticky top-8 hidden h-fit max-w-[18ch] lg:block">
         <Dots class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12" />
         <h1 class="mb-18">{title}</h1>
 
         <div class="flex flex-col">
           <FormattedDate date={pubDate} />
-          <span>
-            {wordCount} words
-          </span>
-          <span>
-            {minutesRead} min read
-          </span>
+          <span>{wordCount} words</span>
+          <span>{minutesRead} min read</span>
         </div>
       </aside>
-      <section
-        class="content-md text-b-gray mt-2 w-full max-w-[55ch] grow md:w-0"
-      >
+      <section class="content-md text-b-gray mt-2 w-full max-w-[55ch] grow md:w-0">
         <slot />
       </section>
       <ExpandedContact />

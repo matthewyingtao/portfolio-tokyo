@@ -17,12 +17,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../shared/constants/consts";
     <Noise />
 
     <Header />
-    <main
-      class="mb-20 flex flex-wrap justify-center gap-12 md:flex-nowrap md:justify-start xl:gap-24"
-    >
-      <aside
-        class="green-fade left-sidebar text-b-minato relative hidden rounded-xl px-4 py-6 whitespace-nowrap lg:block"
-      >
+    <main class="mb-20 flex flex-wrap justify-center gap-12 md:flex-nowrap md:justify-start xl:gap-24">
+      <aside class="green-fade left-sidebar text-b-minato relative hidden rounded-xl px-4 py-6 whitespace-nowrap lg:block">
         <Dots class="absolute top-0 -bottom-2 left-0 -z-10 -translate-x-12" />
         <p>Currently working at</p>
         <p class="mb-18">AKQA NZ</p>
@@ -34,25 +30,23 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../shared/constants/consts";
 
         <div class="-translate-y-3">
           <span class="mb-4 block">Developer</span>
-          {
-            Array.from({ length: 8 }).map((_, i) => (
-              <span
-                class={`__designer-cascade block leading-0 ${i === 0 && "first"}`}
-                style={{
-                  "--i-th": i,
-                }}
-              >
-                Designer
-              </span>
-            ))
-          }
+          {Array.from({ length: 8 }).map((_, i) => (
+            <span
+              class={`__designer-cascade block leading-0 ${i === 0 && "first"}`}
+              style={{
+                "--i-th": i,
+              }}
+            >
+              Designer
+            </span>
+          ))}
         </div>
       </aside>
       <section class="text-b-gray w-[32ch]">
         <p class="mb-16">
-          <span class="text-b-willow-dark">Matthew Tao</span> is a front-end developer
-          who enjoys exploring new technologies and tries to understand the underlying
-          concepts behind them.
+          <span class="text-b-willow-dark">Matthew Tao</span> is a front-end
+          developer who enjoys exploring new technologies and tries to
+          understand the underlying concepts behind them.
         </p>
         <ul class="flex flex-col gap-5">
           <li>
@@ -61,12 +55,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../shared/constants/consts";
               class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
-                Read my
-                <span class="text-b-willow-dark">blog</span> posts
+                Read my <span class="text-b-willow-dark">blog</span> posts
               </span>
-              <ExternalArrow
-                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
+              <ExternalArrow class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </li>
           <li>
@@ -75,12 +66,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../shared/constants/consts";
               class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
-                View my
-                <span class="text-b-willow-dark">projects</span>
+                View my <span class="text-b-willow-dark">projects</span>
               </span>
-              <ExternalArrow
-                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
+              <ExternalArrow class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </li>
           <li>
@@ -92,9 +80,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../shared/constants/consts";
                 Find out more
                 <span class="text-b-willow-dark">about me!</span>
               </span>
-              <ExternalArrow
-                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
+              <ExternalArrow class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </li>
           <li>
@@ -103,12 +89,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../shared/constants/consts";
               class="group after:bg-b-willow relative flex items-center justify-between gap-2 pb-3 after:absolute after:bottom-0 after:left-0 after:h-px after:w-[calc(100%+3rem)] after:-translate-x-6"
             >
               <span>
-                Check out my
-                <span class="text-b-willow-dark">setup</span>
+                Check out my <span class="text-b-willow-dark">setup</span>
               </span>
-              <ExternalArrow
-                class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
+              <ExternalArrow class="aspect-square h-5 w-5 transition-transform ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </li>
         </ul>

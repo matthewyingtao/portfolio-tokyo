@@ -56,18 +56,11 @@ const {
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-{
-  pubDate && (
-    <meta property="article:published_time" content={pubDate.toISOString()} />
-  )
-}
-{
-  updatedDate && (
-    <meta
-      property="article:modified_time"
-      content={updatedDate.toISOString()}
-    />
-  )
-}
+{pubDate && (
+  <meta property="article:published_time" content={pubDate.toISOString()} />
+)}
+{updatedDate && (
+  <meta property="article:modified_time" content={updatedDate.toISOString()} />
+)}
 
 <ClientRouter />
